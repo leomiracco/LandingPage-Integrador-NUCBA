@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Nightmare Before Christmas';
+  src: url('../assets/fonts/Nightmare Before Christmas.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root{
+  --fuenteRuby: 'Rubik', sans-serif;
+  --fuenteNightmareBeforeChristmas: 'Nightmare Before Christmas';;
+  /* --colorFondoNavbar: #1f1d1d; */
+  --colorFondoNavbar: black;
+  --colorSalmon: hsl(0, 98%, 78%);
+}
+
+/* Estilos generales barra de navegación Navbar */
+.navbar{
+  background-color: var(--colorFondoNavbar);
+  position: fixed;
+  /*z-index: 1;*/
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  /*display: grid;
+  grid-template-columns: repeat(2, max-content);*/
+  align-items: center;
+  padding: 0px 75px;
+  font-family: var(--fuenteRuby);
+  font-weight: 400;
+  letter-spacing: 1px;
+  /* overflow: hidden; */
+}
+
+/* Estilos para el div contenedor del logo del navbar */
+.containerDivLogoNavbar{
+    display: flex;
+    width: 0.8%;
+    min-width: 62px;
+}
+
+/* Estilos para el logo del navbar */
+.imagenLogoNavbar{
+  width: 100%;
+  height: 100%;
+  animation-name: aplicandoZoomLogo;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Animación para el logo del navbar */
+@keyframes aplicandoZoomLogo{
+    0%{
+        transform: scale(0.3, 0.3);
+    }1%{
+        transform: rotateZ(0deg);
+    }10%{
+        transform: rotateZ(360deg);
+    }20%{
+        transform: scale(0.5, 0.5);
+    }
+    100%{
+        transform: scale(1.25, 1.25);
+    }
+}
+
+/*---------------------------------------------*/
+/* Estilos para el label, (MENU HAMBURGUESA) casero
+del navbar */
+/* Idea original, Profe Dani */
+
+/* Damos estilo a los span para darle forma
+al logo casero del Menú hamburguesa. */
+.divTresSpanMenuHamburguesa span{
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.inputMenu{
+    display: none;
+}
+
+.listaHamburguesa{
+    /*position: fixed;*/
+    position: absolute;
+    transform: translate(-74px, 26px);
+    width: 200px;
+    list-style: none;
+    font-family: var(--fuenteRuby);
+    display: none;
+}
+
+.listaHamburguesa li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorFondoNavbar);
+    /*border-bottom: 1px solid white;*/
+    border-top: 1px solid white;
+    height: 80px;
+    /* display: none; */
+}
+
+.liContacto{
+  border-bottom: 1px solid white;
+}
+
+.listaHamburguesa li a{
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+/*---------------------------------------------*/
+/* Estilos para el Menú de opciones del navbar */
+
+/* Estilos para el div contenedor del Menú.
+Listado desordenado */
+.ContainerDivMenuNavbar{
+  height: 100%;
+}
+
+/* Estilos para el Listado desordenado */
+.ulPadreMenuNavbar{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+/* Estilos para las opciones del Menú
+listado desordenado (li) */
+.ulPadreMenuNavbar li{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+  list-style: none;
+  background-color: var(--colorFondoNavbar);
+  /*border: 1px solid transparent;*/
+  padding: 0px 5px;
+}
+
+/* Estilos para cuando pasamos el mouse por las
+opciones del Menú listado desordenado (li), */
+.ulPadreMenuNavbar li:hover{
+  background-color: var(--colorSalmon);
+}
+
+/* Estilos para cuando pasamos el mouse por las
+opciones del Menú listado desordenado, pero
+en este caso, haciendo referecia a los links
+etiquetas (a), */
+.ulPadreMenuNavbar a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+}
+
+/* Cuando pasamos el mouse por la opción INICIO
+del Menú listado desordenado (li), como este
+cuenta con subMenú, hacemos que sea visible */
+.opcionInicioConSubOpciones:hover > .ulSubMenuDeOpcionInicio{
+  display: block;
+}
+
+/* Cuando pasamos el mouse por las opciones
+del Menú listado desordenado (li), le aplicamos
+estilos a los links (a), y si, navegamos por el
+subMenú, con lo que seguiríamos pasando el
+mouse por las listas (li), dichos estilos
+opermanecerán activos. */
+.ulPadreMenuNavbar li:hover > a{
+  color: var(--colorFondoNavbar);
+  font-weight: 600;
+  transform: scale(1.1, 1.1);
+}
+
+/* Le decimos que nos maneje la posición relativa
+al link de la opción INICIO que es la que
+contiene el subMenú. Para que sea el padre
+de los subMenús, y su posición depende de esta. */
+.opcionInicioConSubOpciones{
+  position: relative;
+}
+
+/* Acá le estamos aplicando la posición absoluta
+al subMenú, y su ubicación con respecto a la
+opción INICIO. */
+.ulSubMenuDeOpcionInicio{
+  position: absolute;
+  transform: translate(-5px, 1px);
+  display: none;
+}
+
+/* Le aplicamos estilos a las opciones (li)
+del subMenú de la opción INICIO. */
+.ulSubMenuDeOpcionInicio li{
+  height: 80px;
+  border-top: 1px solid white;
+}
+
+.opcionesSubMenuCinco{
+  border-bottom: 1px solid white;
+}
+
+.mainContainerImgFondo{
+  border: 2px solid blue;
+  margin-top: 80px;
+  width: 100vw;
+  /* height: 62.5vh; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  /* overflow: hidden; */
+  /*display: flex; */
+  /*justify-content: center; */
+  /*background-image: url("../assets/img/Freddy.jpg");*/
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center center;*/
+
+  /* display: flex; */
+  /* background-color: gray; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
+  /* background-position: center; */
+  /* text-align: center; */
+  /* border: 5px solid black; */
+  z-index: -1;
+}
+
+.mainContainerImgFondo img{
+  width: 100%;
+  /* height: 100%; */
+}
+
+.divTituloPrincipal{
+  border: 2px solid red;
+  position: absolute;
+  width: 100%;
+  /* height: 100px; */
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+
+
+
+  /* height: 500px; */
+  /*display: grid;*/
+  /*grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));*/
+  /*gap: 10px;*/
+}
+
+.cajaPrueba{
+  /* background-color: white; */
+  /* z-index: 1; */
+}
+
+.mainContenido h1{
+  display: flex;
+  width: 100%;
+}
+
+.mainContenido2{
+  margin-bottom: 500px;
+}
+
+/*---------------------------------------------*/
+/*************** MEDIA QUERY *******************/
+/*---------------------------------------------*/
+
+/*@media only screen and (min-width: 2560px){
+  
+  .mainContainerImgFondo{
+    height: 162vh;
+  }
+}
+*/
+/*@media only screen and (min-width: 2954px){
+  
+  .mainContainerImgFondo{
+    height: 162vh;
+  }
+}*/
+
+/*@media only screen and (min-width: 3739px){
+  
+  .mainContainerImgFondo{
+    height: 162vh;
+  }
+}*/
+
+/*@media only screen and (min-width: 3740px){
+  
+  .mainContainerImgFondo{
+    height: 178vh;
+  }
+}*/
+
+@media only screen and (max-width: 900px){
+
+  /* Esto es importante para que el
+  menú hamburguesa no quede muy cerca
+  del borde derecho y por consiguiente
+  el menú se vería sólo una parte. */
+  .navbar{
+    /*padding-right: 77px;*/
+  }
+    
+  /* Colocamos estilos al div contenedor de 3 span's, que al darle altura y ancho, los
+  usamos para que nos formen el logo típico del Menú hamburguesa de forma casera. */
+  .divTresSpanMenuHamburguesa{
+    /*position: relative;
+      width: 50px;
+      height: 29px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;*/
+  }
+
+  /* Aquí cuando hacemos clic en
+  los 3 span que forman la figura
+  de una hamburguesa, hacemos aparecer
+  el menú. */
+  .inputMenu:checked ~ .listaHamburguesa{
+      /*Display: block;*/
+  }
+
+  /* Y cuando hacemos aparecer el
+  menú hamburguesa, debemos también
+  hacer desaparecer el menú
+  tradicional. */
+  .ContainerDivMenuNavbar{
+      /*display: none;*/
+  }
+
+
+  .mainContainerImgFondo{
+    /*margin-top: 80px;
+    width: 100vw;
+    height: 50vh;*/
+  }
+}
+
+/*@media only screen and (min-width: 310px){
+  
+.navbar{
+  padding-left: 15px;
+}
+
+  .mainContainerImgFondo{
+    height: 28vh;
+  }
+}*/
+
+@media only screen and (min-width: 150px){
+  
+  .navbar{
+   /* height: 50px;
+    justify-content: center;*/
+  }
+
+  .containerDivLogoNavbar{
+    /*display: none;*/
+  }
+
+  .divContainerPrincipalMenuHamburguesa{
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid red;*/
+  }
+
+  .divContainerPrincipalMenuHamburguesa label{
+    /*border: 3px solid blue;
+    width: 20%;*/
+  }
+
+  .divContainerListaMenuHamburguesa{
+    /*border: 3px solid green;
+    margin-top: 30px;*/
+  }
+
+  .divTresSpanMenuHamburguesa{
+    /*border: 3px solid white;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 7px;s
+    cursor: pointer;*/
+  }
+
+  .divImagenHamburguesa span{
+    /*background: white;
+    width: 100%;
+    height: 4px;*/
+  }
+
+  .listaHamburguesa{
+    /*display: flex;*/
+    /*width: 100%;*/
+    /*margin-top: 9px;*/
+    /*display: none;*/
+    /*text-align: center;*/
+    /*background: var(--azulClaro);*/
+    /*border-radius: 7px;*/
+    /*padding: 20px;*/
+    /*width: 150px;*/
+  }
+
+  .listaHamburguesa li{
+    /*height: 40px;*/
+  }
+
+  .mainContainerImgFondo{
+    /*margin-top: 50px;
+    height: 19vh;*/
+  }
+
+  .divTituloPrincipal{
+    /*width: 80%;
+    height: 100%;
+    font-size: 13px;
+    line-height: 20px;*/
+  }
+
+  .divTituloPrincipal span{
+    /*font-family: var(--fuenteNightmareBeforeChristmas);
+    font-weight: 500;
+    text-shadow: 2px 2px 4px black;*/
+  }
+
+}
+
+@media only screen and (min-width: 213px){
+  
+  .navbar{
+    /*height: 50px;
+    justify-content: center;*/
+  }
+
+  .containerDivLogoNavbar{
+    /*display: none;*/
+  }
+
+  .divTresSpanMenuHamburguesa{
+    /*width: 50px;
+    height: 25px;*/
+  }
+
+  .divTresSpanMenuHamburguesa span{
+    /*width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;*/
+  }
+   /*************/
+  .listaHamburguesa{
+    /*transform: translate(-80px, 12px);
+    width: 100%;*/
+  }
+  /*************/
+  .listaHamburguesa li{
+    /*height: 60px;*/
+  }
+  /*************/
+  .mainContainerImgFondo{
+    /*margin-top: 50px;
+    height: 27vh;*/
+  }
+  /*************/
+
+  .divTituloPrincipal{
+/*    width: 80%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 20px;*/
+  }
+
+  .divTituloPrincipal span{
+/*    font-family: var(--fuenteNightmareBeforeChristmas);
+    font-weight: 500;
+    text-shadow: 2px 2px 4px black;
+  }
+*/
+}

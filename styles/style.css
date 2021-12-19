@@ -71,7 +71,7 @@
         transform: scale(0.5, 0.5);
     }
     100%{
-        transform: scale(1.25, 1.25);
+        transform: scale(1.18, 1.18);
     }
 }
 
@@ -226,40 +226,23 @@ del subMenú de la opción INICIO. */
   border: 2px solid blue;
   margin-top: 80px;
   width: 100vw;
-  /* height: 62.5vh; */
   position: relative;
   display: flex;
   flex-direction: column;
-
-  /* overflow: hidden; */
-  /*display: flex; */
-  /*justify-content: center; */
-  /*background-image: url("../assets/img/Freddy.jpg");*/
-  /*background-size: cover;*/
-  /*background-repeat: no-repeat;*/
-  /*background-position: center center;*/
-
-  /* display: flex; */
-  /* background-color: gray; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-attachment: fixed; */
-  /* background-position: center; */
-  /* text-align: center; */
-  /* border: 5px solid black; */
   z-index: -1;
 }
 
 .mainContainerImgFondo img{
   width: 100%;
-  /* height: 100%; */
 }
 
 .divTituloPrincipal{
   border: 2px solid red;
+  font-family: var(--fuenteNightmareBeforeChristmas);
+  font-size: 500px;
+  text-shadow: 30px 30px 7px black;
   position: absolute;
   width: 100%;
-  /* height: 100px; */
 
   top: 50%;
   left: 50%;
@@ -271,40 +254,162 @@ del subMenú de la opción INICIO. */
   text-align: center;
   color: white;
 
-
-
-
-  /* height: 500px; */
   /*display: grid;*/
   /*grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));*/
   /*gap: 10px;*/
 }
 
-.cajaPrueba{
-  /* background-color: white; */
-  /* z-index: 1; */
-}
-
-.mainContenido h1{
+.mainContainerPortadasPelis{
+  border: 2px solid blue;
+  width: 100vw;
+  position: relative;
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  z-index: -1;
 }
 
-.mainContenido2{
-  margin-bottom: 500px;
+.mainContainerPortadasPelis img{
+  width: 100%;
+  opacity:0.4;
+  filter:alpha(opacity=40); /* For IE8 and earlier */
 }
 
 /*---------------------------------------------*/
 /*************** MEDIA QUERY *******************/
 /*---------------------------------------------*/
 
-/*@media only screen and (min-width: 2560px){
+@media only screen and (max-width: 7137px){
   
-  .mainContainerImgFondo{
-    height: 162vh;
+  .divTituloPrincipal{
+    font-size: 420px;
+    text-shadow: 20px 20px 7px black;
   }
 }
-*/
+
+@media only screen and (max-width: 5996px){
+  
+  .divTituloPrincipal{
+    font-size: 380px;
+  }
+}
+
+@media only screen and (max-width: 5436px){
+  
+  .divTituloPrincipal{
+    font-size: 320px;
+    text-shadow: 15px 15px 7px black;
+  }
+}
+
+@media only screen and (max-width: 4570px){
+  
+  .divTituloPrincipal{
+    font-size: 280px;
+  }
+}
+
+@media only screen and (max-width: 4096px){
+  
+  .divTituloPrincipal{
+    font-size: 260px;
+    text-shadow: 10px 10px 7px black;
+  }
+}
+
+@media only screen and (max-width: 4000px){
+  
+  .divTituloPrincipal{
+    font-size: 220px;
+  }
+}
+
+@media only screen and (max-width: 3144px){
+  
+  .divTituloPrincipal{
+    font-size: 170px;
+    text-shadow: 10px 10px 7px black;
+  }
+}
+
+@media only screen and (max-width: 2431px){
+  
+  .divTituloPrincipal{
+    font-size: 130px;
+  }
+}
+
+@media only screen and (max-width: 1861px){
+  
+  .divTituloPrincipal{
+    font-size: 100px;
+  }
+}
+
+@media only screen and (max-width: 1433px){
+  
+  .divTituloPrincipal{
+    font-size: 70px;
+    text-shadow: 8px 8px 7px black;
+  }
+}
+
+@media only screen and (max-width: 1006px){
+  
+  .divTituloPrincipal{
+    font-size: 50px;
+    text-shadow: 6px 6px 5px black;
+  }
+}
+
+@media only screen and (max-width: 720px){
+  
+  .divTituloPrincipal{
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 578px){
+  
+  .divTituloPrincipal{
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 435px){
+  
+  .divTituloPrincipal{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 293px){
+  
+  .divTituloPrincipal{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 179px){
+  
+  .divTituloPrincipal{
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 136px){
+  
+  .divTituloPrincipal{
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 107px){
+  
+  .divTituloPrincipal{
+    font-size: 5px;
+  }
+}
+
 /*@media only screen and (min-width: 2954px){
   
   .mainContainerImgFondo{
@@ -515,7 +620,6 @@ del subMenú de la opción INICIO. */
   .divTituloPrincipal span{
 /*    font-family: var(--fuenteNightmareBeforeChristmas);
     font-weight: 500;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px black;*/
   }
-*/
 }

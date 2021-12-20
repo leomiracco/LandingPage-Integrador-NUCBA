@@ -20,6 +20,7 @@
   /* --colorFondoNavbar: #1f1d1d; */
   --colorFondoNavbar: black;
   --colorSalmon: hsl(0, 98%, 78%);
+  --colorSangre: hsl(0,100%,40%);
 }
 
 /* Estilos generales barra de navegación Navbar */
@@ -238,10 +239,10 @@ del subMenú de la opción INICIO. */
 }
 
 .divTituloPrincipal{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   font-family: var(--fuenteNightmareBeforeChristmas);
-  font-size: 500px;
-  text-shadow: 30px 30px 7px black;
+  font-size: 200px;
+  text-shadow: 30px 30px 6px black;
   position: absolute;
   width: 100%;
 
@@ -254,6 +255,7 @@ del subMenú de la opción INICIO. */
   align-items: center;
   text-align: center;
   color: white;
+  /* color: var(--colorSangre); */
 
   /*display: grid;*/
   /*grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));*/
@@ -279,118 +281,119 @@ del subMenú de la opción INICIO. */
 /*************** MEDIA QUERY *******************/
 /*---------------------------------------------*/
 
-@media only screen and (max-width: 7137px){
+/* @media only screen and (max-width: 7137px){
   
   .divTituloPrincipal{
     font-size: 420px;
     text-shadow: 20px 20px 7px black;
   }
-}
+}*/
 
-@media only screen and (max-width: 5996px){
+@media only screen and (max-width: 5826px){
   
   .divTituloPrincipal{
-    font-size: 380px;
+    font-size: 150px;
   }
 }
 
-@media only screen and (max-width: 5436px){
+@media only screen and (max-width: 4520px){
   
   .divTituloPrincipal{
-    font-size: 320px;
-    text-shadow: 15px 15px 7px black;
+    font-size: 120px;
+    text-shadow: 15px 15px 6px black;
   }
 }
 
-@media only screen and (max-width: 4570px){
+@media only screen and (max-width: 3600px){
   
   .divTituloPrincipal{
-    font-size: 280px;
+    font-size: 90px;
   }
 }
 
-@media only screen and (max-width: 4096px){
-  
-  .divTituloPrincipal{
-    font-size: 260px;
-    text-shadow: 10px 10px 7px black;
-  }
-}
-
-@media only screen and (max-width: 4000px){
-  
-  .divTituloPrincipal{
-    font-size: 220px;
-  }
-}
-
-@media only screen and (max-width: 3144px){
-  
-  .divTituloPrincipal{
-    font-size: 170px;
-    text-shadow: 10px 10px 7px black;
-  }
-}
-
-@media only screen and (max-width: 2431px){
-  
-  .divTituloPrincipal{
-    font-size: 130px;
-  }
-}
-
-@media only screen and (max-width: 1861px){
-  
-  .divTituloPrincipal{
-    font-size: 100px;
-  }
-}
-
-@media only screen and (max-width: 1433px){
+@media only screen and (max-width: 2720px){
   
   .divTituloPrincipal{
     font-size: 70px;
-    text-shadow: 8px 8px 7px black;
+    text-shadow: 10px 10px 6px black;
   }
 }
 
-@media only screen and (max-width: 1006px){
+@media only screen and (max-width: 2120px){
   
   .divTituloPrincipal{
     font-size: 50px;
-    text-shadow: 6px 6px 5px black;
   }
 }
 
-@media only screen and (max-width: 720px){
-  
-  .divTituloPrincipal{
-    font-size: 40px;
-  }
-}
-
-@media only screen and (max-width: 578px){
+@media only screen and (max-width: 1520px){
   
   .divTituloPrincipal{
     font-size: 30px;
+    text-shadow: 10px 10px 6px black;
   }
 }
 
-@media only screen and (max-width: 435px){
+@media only screen and (max-width: 930px){
   
   .divTituloPrincipal{
     font-size: 20px;
+    text-shadow: 5px 5px 6px black;
   }
 }
 
-@media only screen and (max-width: 293px){
+@media only screen and (max-width: 640px){
   
   .divTituloPrincipal{
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
-@media only screen and (max-width: 179px){
+@media only screen and (max-width: 470px){
+  
+  .divTituloPrincipal{
+    font-size: 10px;
+    text-shadow: 4px 4px 6px black;
+  }
+}
+
+@media only screen and (max-width: 320px){
+  
+  .divTituloPrincipal{
+    font-size: 7px;
+    text-shadow: 3px 3px 5px black;
+  }
+}
+
+@media only screen and (max-width: 230px){
+  
+  .divTituloPrincipal{
+    font-size: 5px;
+  }
+}
+
+@media only screen and (max-width: 170px){
+  
+  .divTituloPrincipal{
+    font-size: 4px;
+  }
+}
+
+@media only screen and (max-width: 130px){
+  
+  .divTituloPrincipal{
+    font-size: 3px;
+  }
+}
+
+@media only screen and (max-width: 95px){
+  
+  .divTituloPrincipal{
+    font-size: 2px;
+  }
+}
+
+/*@media only screen and (max-width: 179px){
   
   .divTituloPrincipal{
     font-size: 9px;
@@ -409,7 +412,7 @@ del subMenú de la opción INICIO. */
   .divTituloPrincipal{
     font-size: 5px;
   }
-}
+} */
 
 /*@media only screen and (min-width: 2954px){
   

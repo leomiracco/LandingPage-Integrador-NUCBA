@@ -20,6 +20,7 @@
   /* --colorFondoNavbar: #1f1d1d; */
   --colorFondoNavbar: black;
   --colorSalmon: hsl(0, 98%, 78%);
+  --colorSalmonClaro: hsl(0, 59%, 88%);
   --colorSangre: hsl(0,100%,40%);
 }
 
@@ -225,7 +226,7 @@ del subMenú de la opción INICIO. */
 }
 
 .mainContainerImgFondo{
-  border: 2px solid blue;
+  /*border: 2px solid blue;*/
   margin-top: 80px;
   width: 100vw;
   position: relative;
@@ -256,25 +257,73 @@ del subMenú de la opción INICIO. */
   text-align: center;
   color: white;
   /* color: var(--colorSangre); */
-
-  /*display: grid;*/
-  /*grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));*/
-  /*gap: 10px;*/
 }
 
 .mainContainerPortadasPelis{
-  border: 2px solid blue;
+  /* border: 2px solid red; */
   width: 100vw;
-  position: relative;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../assets/img/PortadaPelis.png");
+  background-size: cover;
+
+  /* position: relative; */
   display: flex;
-  flex-direction: column;
-  z-index: -1;
+  /* flex-direction: column; */
+  /* z-index: -1; */
 }
 
 .mainContainerPortadasPelis img{
+  /* width: 100%; */
+  /* opacity: 0.4; */
+  /* filter:alpha(opacity=40); For IE8 and earlier */
+}
+
+.containerTarjetasPelis{
+  /* border: 2px solid blue; */
+  /* position: absolute; */
   width: 100%;
-  opacity:0.4;
-  filter:alpha(opacity=40); /* For IE8 and earlier */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-row-gap: 20px;
+  margin: 8% 0%;
+  justify-items: center;
+}
+
+.tarjetaPelis{
+  border: 30px solid white;
+  display: flex;
+  width: 70%;
+  box-shadow: 50px 50px 20px white;
+}
+
+.tarjetaPelis img{
+  width: 100%;
+  /* opacity: 1.0; */
+  /* filter:alpha(opacity=100); For IE8 and earlier */
+}
+
+.containerImagenFondoTres{
+  /* border: 1px solid red; */
+
+  /* position: absolute; */
+  /* width: 100%; */
+  /*width: 100vw;*/
+  /* display: flex; */
+  /* flex-direction: column; */
+  /*z-index: -2;*/
+}
+
+/*.containerImagenFondoTres img{
+  width: 100%;
+  opacity: 0.4;
+  filter:alpha(opacity=40);
+}*/
+
+.containerDatosPersonales{
+  /*position: absolute;*/
+  /* top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%); */
+  font-size: 50px;
 }
 
 /*---------------------------------------------*/

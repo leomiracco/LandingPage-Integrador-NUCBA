@@ -321,6 +321,23 @@
   }
 }
 
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  
+  .botonPelis{
+    width: 16vw;
+    height: 9vh;
+  }
+
+  .botonPelis a{
+    font-size: 3vw;
+  }
+
+  .botonPelisTrailer{
+    top: 60%;
+    transform: translate(-50%, -60%);
+  }
+}
+
 @media only screen and (max-width: 750px){
   
   .ContainerMenuNavbar{
@@ -337,23 +354,6 @@
   .portadaPelis{
     border: 0.5vh solid white;
     box-shadow: 0.3vh 0.3vh 0.5vh white;
-  }
-}
-
-@media only screen and (max-width: 584px) and (orientation: landscape) {
-  
-  .botonPelis{
-    width: 16vw;
-    height: 6vh;
-  }
-
-  .botonPelis a{
-    font-size: 3vw;
-  }
-
-  .botonPelisTrailer{
-    top: 60%;
-    transform: translate(-50%, -60%);
   }
 }
 

@@ -168,10 +168,10 @@
   /* border: 4px solid blue; */
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-column-gap: 3vw;
-  grid-row-gap: 1vh;
-  margin: 10vh 2vw;
+  grid-row-gap: 5vh;
+  margin: 10vh 3vw;
   justify-items: center;
 }
 
@@ -185,7 +185,7 @@
 }
 
 .portadaPelis:hover{
-  transform: scale(1.17, 1.17);
+  transform: scale(1.15, 1.15);
 }
 
 .portadaPelis img{
@@ -197,8 +197,8 @@
   width: 5vw;
   height: 3vh;
   box-shadow: 0.5vh 0.5vh 0.5vh black;
-  background-color: rgb(199, 17, 199);
-  border-radius: 10px;
+  background-color: rgb(114, 20, 34);
+  border-radius: 30px;
 }
 
 .botonPelis a{ 
@@ -224,9 +224,9 @@
 
 .botonPelisTrailer{
   position: absolute;
-  top: 63%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -63%);
+  transform: translate(-50%, -60%);
 }
 
 /*<--------------------------------------------> */
@@ -238,7 +238,7 @@
 @media only screen and (max-width: 2500px){
   
   .sectionPortadaPelis{
-    margin: 7vh 2vw;
+    margin: 9vh 3vw;
   }
 
   .portadaPelis{
@@ -258,19 +258,33 @@
 @media only screen and (max-width: 1450px){
   
   .sectionPortadaPelis{
-    margin: 5vh 2vw;
+    margin: 8vh 3vw;
+  }
+}
+
+@media only screen and (max-width: 1379px){
+  
+  .portadaPelis:hover{
+    transform: scale(1.09, 1.09);
   }
 }
 
 @media only screen and (max-width: 1200px){
   
   .botonPelis{
-    height: 2.5vh;
+    height: 3vh;
   }
 
   .botonPelisTrailer{
-    top: 64%;
-    transform: translate(-50%, -64%);
+    top: 58%;
+    transform: translate(-50%, -58%);
+  }
+}
+
+@media only screen and (max-width: 999px){
+  
+  .portadaPelis:hover{
+    transform: scale(1.05, 1.05);
   }
 }
 
@@ -278,32 +292,32 @@
   
   .botonPelis{
     width: 6vw;
-    height: 2.1vh;
+    height: 3vh;
   }
 
   .botonPelisTrailer{
-    top: 65%;
-    transform: translate(-50%, -65%);
+    top: 60%;
+    transform: translate(-50%, -60%);
   }
 }
 
 @media only screen and (max-width: 900px){
   
   .sectionPortadaPelis{
-    margin: 3vh 2vw;
+    margin: 6vh 3vw;
   }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 852px){
   
   .botonPelis{
-    width: 6.5vw;
-    height: 1.9vh;
+    width: 7vw;
+    height: 4vh;
   }
 
   .botonPelisTrailer{
-    top: 75%;
-    transform: translate(-50%, -75%);
+    top: 58%;
+    transform: translate(-50%, -58%);
   }
 }
 
@@ -317,7 +331,7 @@
 @media only screen and (max-width: 650px){
   
   .sectionPortadaPelis{
-    margin: 1.8vh 2vw;
+    margin: 4vh 3vw;
   }
 
   .portadaPelis{
@@ -326,28 +340,58 @@
   }
 }
 
+@media only screen and (max-width: 537px){
+  
+  .portadaPelis:hover{
+    transform: scale(1.01, 1.01);
+  }
+}
+
+@media only screen and (max-width: 549px){
+  
+  .sectionPortadaPelis{
+    margin: 5vh 4vw;
+  }
+
+  .botonPelis{
+    width: 22vw;
+    height: 5vh;
+  }
+
+  .botonPelisTrailer{
+    top: 60%;
+    transform: translate(-50%, -60%);
+  }
+
+  .botonPelis a{
+    font-size: 4vw;
+  }
+}
+
 @media only screen and (max-width: 520px){
   
   .botonPelis{
-    width: 7vw;
-    height: 1.5vh;
+    width: 22vw;
+    height: 5vh;
   }
 }
 
 @media only screen and (max-width: 500px){
   
-  .sectionPortadaPelis{
-    margin: 1.6vh 2vw;
+  
+}
+
+@media only screen and (max-width: 450px){
+  
+  .botonPelis{
+    width: 22vw;
+    height: 4vh;
   }
 }
 
 @media only screen and (max-width: 410px){
   
-  .botonPelis{
-    width: 7vw;
-    height: 1.2vh;
-    border: 1px solid white;
-  }
+  
 }
 
 @media only screen and (max-width: 400px){
@@ -361,38 +405,33 @@
     box-shadow: 0.2vh 0.2vh 0.4vh white;
   }
 
-  .botonPelis{
-    border: 0.02vh solid white;
-    width: 6vw;
-    height: 1vh;
-    border-radius: 3px;
-  }
-
   .botonPelisTrailer{
     position: absolute;
-    top: 68%;
+    top: 62%;
     left: 50%;
-    transform: translate(-50%, -68%);
+    transform: translate(-50%, -62%);
   }
 }
 
 @media only screen and (max-width: 350px){
-  
-  .botonPelis{
-    width: 6.5vw;
-    height: 1vh;
-    border: 0.01px solid white;
-  }
 
   .botonPelisTrailer{
-    top: 73%;
-    transform: translate(-50%, -73%);
+    top: 65%;
+    transform: translate(-50%, -65%);
   }
 }
 
 @media only screen and (max-width: 300px){
   
   
+}
+
+
+@media only screen and (max-width: 258px){
+  
+  .portadaPelis{
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 200px){

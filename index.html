@@ -11,22 +11,25 @@
 <body>
 
   <nav class="navbar">
-      
-    <div class="containerDivLogoNavbar">
-      <img src="./assets/img/Logo11.png" alt="Es la imagen del Logo de la página" class="imagenLogoNavbar">
+    
+    <!---------------  Logo Navbar  ---------------->
+    <div class="containerLogoNavbar">
+      <img src="./assets/img/Logo11.png" alt="Es la imagen del Logo de la página" class="imgLogoNavbar">
     </div>
+    <!-------------------------------------------->
 
-    <div class="divContainerPrincipalMenuHamburguesa">
-      <label for="labelConTresSpanMenuHamburguesa">
-        <div class="divTresSpanMenuHamburguesa">
+    <!----------  Menu Hamburguesa  ---------------->
+    <div class="containerMenuHamburguesa">
+      <label for="labelMenuHamburguesa">
+        <div class="containerSpanMenuHamburguesa">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </label>
 
-      <div class="divContainerListaMenuHamburguesa">
-        <input type="checkbox" id="labelConTresSpanMenuHamburguesa" class="inputMenu">
+      <div class="containerListaMenuHamburguesa">
+        <input type="checkbox" id="labelMenuHamburguesa" class="inputMenu">
         <ul class="listaHamburguesa">
           <li><a class="" href="#">INICIO</a></li>
           <li><a class="" href="#">NOTICIAS</a></li>
@@ -34,31 +37,33 @@
           <li><a class="" href="#">NOSOTROS</a></li>
           <li class="liContacto"><a class="" href="#">CONTACTO</a></li>
         </ul>
-      </div>   
-    </div> 
+      </div>
+    </div>
+    <!-------------------------------------------->
 
-    <div class="ContainerDivMenuNavbar">
+    <!---  Opciones Menu tradicional Navbar  ----->
+    <div class="ContainerMenuNavbar">
       <ul class="ulPadreMenuNavbar">
-        <li class="opcionesMenuPrincipal opcionInicioConSubOpciones"><a class="enlaceDeMenuInicio" href="#">INICIO</a>
-          <ul class="ulSubMenuDeOpcionInicio" >
-            <li class="opcionesSubMenu subListaUno"><a href="#imgFondo2">IMAGEN DE FONDO</a></li>
-            <li class="opcionesSubMenu"><a href="#">SECCIÓN 2</a></li>
-            <li class="opcionesSubMenu"><a href="#">SECCIÓN 3</a></li>
-            <li class="opcionesSubMenu"><a href="#">SECCIÓN 4</a></li>
-            <li class="opcionesSubMenuCinco"><a href="#">SECCIÓN 5</a></li>
+        <li class="listaMenuPrincipal listaInicio"><a class="enlaceOpcionInicio" href="#">INICIO</a>
+          <ul class="ulSubMenuOpcionInicio" >
+            <li class="listaSubMenu subListaUno"><a href="#imgFondo2">IMAGEN DE FONDO</a></li>
+            <li class="listaSubMenu"><a href="#">SECCIÓN 2</a></li>
+            <li class="listaSubMenu"><a href="#">SECCIÓN 3</a></li>
+            <li class="listaSubMenu"><a href="#">SECCIÓN 4</a></li>
+            <li class="listaSubMenu subListaCinco"><a href="#">SECCIÓN 5</a></li>
           </ul>
         </li>
-        <li class="opcionesMenuPrincipal"><a href="#">NOTICIAS</a></li>
-        <li class="opcionesMenuPrincipal"><a href="#">APP</a></li>
-        <li class="opcionesMenuPrincipal"><a href="#">NOSOTROS</a></li>
-        <li class="opcionesMenuPrincipal"><a href="#">CONTACTO</a></li>
+        <li class="listaMenuPrincipal"><a href="#">NOTICIAS</a></li>
+        <li class="listaMenuPrincipal"><a href="#">APP</a></li>
+        <li class="listaMenuPrincipal"><a href="#">NOSOTROS</a></li>
+        <li class="listaMenuPrincipal"><a href="#">CONTACTO</a></li>
       </ul>
     </div>
 
   </nav>
+  <!-------------------------------------------->
 
-
-  <main class="mainContainerImgFondo">
+  <main class="mainImgFondoPrincipal">
     
     <img src="./assets/img/Freddy.jpg" alt="">
 
@@ -70,41 +75,72 @@
 
   </main>
 
-  <main class="mainContainerPortadasPelis" id="imgFondo2">
+  <main class="mainPortadasPelis" id="PortadasPelis">
 
-    <section class="containerTarjetasPelis">
-      <div class="tarjetaPelis tarjetaPeliculaUno">
+    <section class="sectionPortadaPelis">
+      <div class="portadaPelis tarjetaPeliOne">
         <img src="./assets/img/Star-Wars-IV.png" alt="">
 
-        <!-- <div class="containerPelisInfo"> -->
-        <button class="botonPelis botonInfoPeliOne">
+        <button class="botonPelis botonPelisInfo botonInfoPeliOne">
           <a href="https://es.wikipedia.org/wiki/Star_Wars:_Episodio_IV_-_Una_nueva_esperanza" target="_alt">INFO.</a>
         </button>
-        <!-- </div> -->
-        <button class="botonPelis botonAbajo botonTrailerPeliTwo">
+
+        <button class="botonPelis botonPelisTrailer botonTrailerPeliOne">
           <a href="https://www.youtube.com/watch?v=beAH5vea99k&ab_channel=StarWarsEspa%C3%B1a" target="_alt">TRÁILER</a>
         </button>
       </div> 
       
-      <div class="tarjetaPelis tarjetaPeliculaDos">
+      <div class="portadaPelis tarjetaPeliTwo">
         <img src="./assets/img/Close-Encounters-of-the-Third-Kind-1977.jpg" alt="">
+
+        <button class="botonPelis botonPelisInfo botonInfoPeliTwo">
+          <a href="https://es.wikipedia.org/wiki/Close_Encounters_of_the_Third_Kind" target="_alt">INFO.</a>
+        </button>
+
+        <button class="botonPelis botonPelisTrailer botonTrailerPeliTwo">
+          <a href="https://www.youtube.com/watch?v=dSpQ3G08k48&ab_channel=SonyPicturesEntertainment" target="_alt">TRÁILER</a>
+        </button>
       </div>
 
-      <div class="tarjetaPelis tarjetaPeliculaTres">
+      <div class="portadaPelis tarjetaPeliThree">
         <img src="./assets/img/The-Incredible-Hulk.png" alt="">
+
+        <button class="botonPelis botonPelisInfo botonInfoPeliThree">
+          <a href="https://es.wikipedia.org/wiki/The_Incredible_Hulk_(serie_de_televisi%C3%B3n_de_1978)" target="_alt">INFO.</a>
+        </button>
+
+        <button class="botonPelis botonPelisTrailer botonTrailerPeliThree">
+          <a href="https://www.youtube.com/watch?v=pX_yN4ONSZ8&ab_channel=SuperFilms" target="_alt">TRÁILER</a>
+        </button>
       </div>
 
-      <div class="tarjetaPelis tarjetaPeliculaTres">
+      <div class="portadaPelis tarjetaPeliFour">
         <img src="./assets/img/Superman-I-1978.png" alt="">
+
+        <button class="botonPelis botonPelisInfo botonInfoPeliFour">
+          <a href="https://es.wikipedia.org/wiki/Superman:_la_pel%C3%ADcula" target="_alt">INFO.</a>
+        </button>
+
+        <button class="botonPelis botonPelisTrailer botonTrailerPeliFour">
+          <a href="https://www.youtube.com/watch?v=wOkb8pxtTfk&ab_channel=retrowhiztv" target="_alt">TRÁILER</a>
+        </button>
       </div>
 
-      <div class="tarjetaPelis tarjetaPeliculaTres">
+      <div class="portadaPelis tarjetaPeliFive">
         <img src="./assets/img/Christine1983.jpg" alt="">
+
+        <button class="botonPelis botonPelisInfo botonInfoPeliFour">
+          <a href="https://es.wikipedia.org/wiki/Christine_(pel%C3%ADcula_de_1983)" target="_alt">INFO.</a>
+        </button>
+
+        <button class="botonPelis botonPelisTrailer botonTrailerPeliFour">
+          <a href="https://www.youtube.com/watch?v=ieBmy6qjiCI&ab_channel=MovieclipsClassicTrailers" target="_alt">TRÁILER</a>
+        </button>
       </div>
     </section>
   </main>
 
-  <main class="containerImagenFondoTres">
+  <!-- <main class="containerImagenFondoTres">
     <section class="tituloContactUs">
       <h1>Contact Us</h1>
     </section>
@@ -184,7 +220,7 @@
       </div>
     </footer>
 
-  </main>
+  </main> -->
 
 </body>
 </html> 

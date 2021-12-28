@@ -12,135 +12,140 @@
 
   <nav class="navbar">
     
-    <!---------------  Logo Navbar  ---------------->
+    <!---------------  LOGO NAVBAR  ---------------->
     <div class="containerLogoNavbar">
       <img src="./assets/img/Logo11.png" alt="Es la imagen del Logo de la página" class="imgLogoNavbar">
     </div>
     <!-------------------------------------------->
 
-    <!----------  Menu Hamburguesa  ---------------->
-    <div class="containerMenuHamburguesa">
-      <label for="labelMenuHamburguesa">
-        <div class="containerSpanMenuHamburguesa">
+    <!----------  HAMBURGER MENU  ---------------->
+    <div class="containerHamburgerMenu">
+      <label for="labelHamburgerMenu">
+        <div class="containerImageHamburgerMenu">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </label>
 
-      <div class="containerListaMenuHamburguesa">
-        <input type="checkbox" id="labelMenuHamburguesa" class="inputMenu">
-        <ul class="listaHamburguesa">
+      <div class="containerUnorderedListHamburgerMenu">
+        <input type="checkbox" id="labelHamburgerMenu" class="inputMenu">
+        <ul class="unorderedListHamburgerMenu">
           <li><a class="" href="#">INICIO</a></li>
           <li><a class="" href="#">NOTICIAS</a></li>
           <li><a class="" href="#">APP</a></li>
           <li><a class="" href="#">NOSOTROS</a></li>
-          <li class="liContacto"><a class="" href="#">CONTACTO</a></li>
+          <li class="ItemListContacto"><a class="" href="#">CONTACTO</a></li>
         </ul>
       </div>
     </div>
     <!-------------------------------------------->
 
-    <!---  Opciones Menu tradicional Navbar  ----->
-    <div class="ContainerMenuNavbar">
-      <ul class="ulPadreMenuNavbar">
-        <li class="listaMenuPrincipal listaInicio"><a class="enlaceOpcionInicio" href="#">INICIO</a>
-          <ul class="ulSubMenuOpcionInicio" >
-            <li class="listaSubMenu subListaUno"><a href="#imgFondo2">IMAGEN DE FONDO</a></li>
-            <li class="listaSubMenu"><a href="#">SECCIÓN 2</a></li>
-            <li class="listaSubMenu"><a href="#">SECCIÓN 3</a></li>
-            <li class="listaSubMenu"><a href="#">SECCIÓN 4</a></li>
-            <li class="listaSubMenu subListaCinco"><a href="#">SECCIÓN 5</a></li>
+    <!---  MAIN MENU NAVBAR  ----->
+    <div class="containerMainMenuNavbar">
+      <ul class="unorderedListMainMenu">
+        <li class="ItemListMainMenu ItemListInicio"><a class="LinkItemListInicio" href="#">INICIO</a>
+          <ul class="unorderedSubListItemListInicio" >
+            <li class="ItemSubList ItemSubListOne"><a href="#imgFondo2">IMAGEN DE FONDO</a></li>
+            <li class="ItemSubList"><a href="#">SECCIÓN 2</a></li>
+            <li class="ItemSubList"><a href="#">SECCIÓN 3</a></li>
+            <li class="ItemSubList"><a href="#">SECCIÓN 4</a></li>
+            <li class="ItemSubList ItemSubListFive"><a href="#">SECCIÓN 5</a></li>
           </ul>
         </li>
-        <li class="listaMenuPrincipal"><a href="#">NOTICIAS</a></li>
-        <li class="listaMenuPrincipal"><a href="#">APP</a></li>
-        <li class="listaMenuPrincipal"><a href="#">NOSOTROS</a></li>
-        <li class="listaMenuPrincipal"><a href="#">CONTACTO</a></li>
+        <li class="ItemListMainMenu"><a href="#">NOTICIAS</a></li>
+        <li class="ItemListMainMenu"><a href="#">APP</a></li>
+        <li class="ItemListMainMenu"><a href="#">NOSOTROS</a></li>
+        <li class="ItemListMainMenu"><a href="#">CONTACTO</a></li>
       </ul>
     </div>
 
   </nav>
   <!-------------------------------------------->
 
-  <main class="mainImgFondoPrincipal">
+  <!-- <-----  MAIN TITLE AND MAIN BACKGROUND IMAGE  ---->
+  <main class="MainBackgroundImage">
     
     <img src="./assets/img/Freddy.jpg" alt="">
 
-    <div class="divTituloPrincipal">
+    <div class="containerMainTitle">
       <h1>
         CLÁSICOS QUE MARCARON MI INFANCIA
       </h1>
     </div>
 
   </main>
+  <!-- ---------------------------------------- -->
 
-  <main class="mainPortadasPelis" id="PortadasPelis">
+  <!-- <------------  MOVIE COVERS---------->
+  <main class="mainMovieCovers" id="movieCovers">
 
-    <section class="sectionPortadaPelis">
-      <div class="portadaPelis tarjetaPeliOne">
+    <section class="movieCoversSection">
+      <div class="containerMovieCovers containerMovieCoversOne">
         <img src="./assets/img/Star-Wars-IV.png" alt="">
 
-        <button class="botonPelis botonPelisInfo botonInfoPeliOne">
+        <button class="buttonMovies buttonMoviesInfo buttonMoviesInfoOne">
           <a href="https://es.wikipedia.org/wiki/Star_Wars:_Episodio_IV_-_Una_nueva_esperanza" target="_alt">INFO.</a>
         </button>
 
-        <button class="botonPelis botonPelisTrailer botonTrailerPeliOne">
+        <button class="buttonMovies buttonMoviesTrailer buttonMoviesOne">
           <a href="https://www.youtube.com/watch?v=beAH5vea99k&ab_channel=StarWarsEspa%C3%B1a" target="_alt">TRÁILER</a>
         </button>
       </div> 
       
-      <div class="portadaPelis tarjetaPeliTwo">
+      <div class="containerMovieCovers containerMovieCoversTwo">
         <img src="./assets/img/Close-Encounters-of-the-Third-Kind-1977.jpg" alt="">
 
-        <button class="botonPelis botonPelisInfo botonInfoPeliTwo">
+        <button class="buttonMovies buttonMoviesInfo buttonMoviesInfoTwo">
           <a href="https://es.wikipedia.org/wiki/Close_Encounters_of_the_Third_Kind" target="_alt">INFO.</a>
         </button>
 
-        <button class="botonPelis botonPelisTrailer botonTrailerPeliTwo">
+        <button class="buttonMovies buttonMoviesTrailer buttonMoviesTrailerTwo">
           <a href="https://www.youtube.com/watch?v=dSpQ3G08k48&ab_channel=SonyPicturesEntertainment" target="_alt">TRÁILER</a>
         </button>
       </div>
 
-      <div class="portadaPelis tarjetaPeliThree">
+      <div class="containerMovieCovers containerMovieCoversThree">
         <img src="./assets/img/The-Incredible-Hulk.png" alt="">
 
-        <button class="botonPelis botonPelisInfo botonInfoPeliThree">
+        <button class="buttonMovies buttonMoviesInfo buttonMoviesInfoThree">
           <a href="https://es.wikipedia.org/wiki/The_Incredible_Hulk_(serie_de_televisi%C3%B3n_de_1978)" target="_alt">INFO.</a>
         </button>
 
-        <button class="botonPelis botonPelisTrailer botonTrailerPeliThree">
+        <button class="buttonMovies buttonMoviesTrailer buttonMoviesTrailerThree">
           <a href="https://www.youtube.com/watch?v=pX_yN4ONSZ8&ab_channel=SuperFilms" target="_alt">TRÁILER</a>
         </button>
       </div>
 
-      <div class="portadaPelis tarjetaPeliFour">
+      <div class="containerMovieCovers containerMovieCoversFour">
         <img src="./assets/img/Superman-I-1978.png" alt="">
 
-        <button class="botonPelis botonPelisInfo botonInfoPeliFour">
+        <button class="buttonMovies buttonMoviesInfo buttonMoviesInfoFour">
           <a href="https://es.wikipedia.org/wiki/Superman:_la_pel%C3%ADcula" target="_alt">INFO.</a>
         </button>
 
-        <button class="botonPelis botonPelisTrailer botonTrailerPeliFour">
+        <button class="buttonMovies buttonMoviesTrailer buttonMoviesTrailerFour">
           <a href="https://www.youtube.com/watch?v=wOkb8pxtTfk&ab_channel=retrowhiztv" target="_alt">TRÁILER</a>
         </button>
       </div>
 
-      <div class="portadaPelis tarjetaPeliFive">
+      <div class="containerMovieCovers containerMovieCoversFive">
         <img src="./assets/img/Christine1983.jpg" alt="">
 
-        <button class="botonPelis botonPelisInfo botonInfoPeliFour">
+        <button class="buttonMovies buttonMoviesInfo buttonMoviesInfoFive">
           <a href="https://es.wikipedia.org/wiki/Christine_(pel%C3%ADcula_de_1983)" target="_alt">INFO.</a>
         </button>
 
-        <button class="botonPelis botonPelisTrailer botonTrailerPeliFour">
+        <button class="buttonMovies buttonMoviesTrailer buttonMoviesTrailerFive">
           <a href="https://www.youtube.com/watch?v=ieBmy6qjiCI&ab_channel=MovieclipsClassicTrailers" target="_alt">TRÁILER</a>
         </button>
       </div>
     </section>
   </main>
+  <!-------------------------------------------->
 
-  <!-- <main class="containerImagenFondoTres">
+
+  <!-- <main class="personalDataSection">
     <section class="tituloContactUs">
       <h1>Contact Us</h1>
     </section>

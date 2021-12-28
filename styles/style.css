@@ -1,5 +1,6 @@
-@font-face {font-family: 'Rubik';
-  src: url('../assets/fonts/static/Rubik-Regular.ttf') format('truetype');
+@font-face {
+  font-family: 'Rubik';
+  src: url('../assets/fonts/Rubik-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
@@ -52,13 +53,13 @@
   width: 100%;
   min-width: 50px;
   max-width: 70px;
-  animation-name: aplicandoZoomLogo;
+  animation-name: zoomLogo;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-@keyframes aplicandoZoomLogo{
+@keyframes zoomLogo{
   0%{
       transform: scale(0.3, 0.3);
   }1%{
@@ -73,39 +74,39 @@
   }
 }
 
-/* <----------  MENÚ HAMBURGUESA  ----------------> */
-.containerMenuHamburguesa{
+/* <----------  HIDE HAMBURGER MENU  ----------------> */
+.containerHamburgerMenu{
   display: none;
 }
 
-.containerListaMenuHamburguesa{
+.containerUnorderedListHamburgerMenu{
   display: none;
 }
 
-.ulSubMenuOpcionInicio{
+.unorderedSubListItemListInicio{
   display: none;
 }
 /*<--------------------------------------------> */
 
-.ContainerMenuNavbar{
+.containerMainMenuNavbar{
   height: 100%;
   align-items: center;
 }
 
-.ulPadreMenuNavbar{
+.unorderedListMainMenu{
   /* border: 2px solid red; */
   height: 100%;
   display: flex;
   list-style: none;
 }
 
-.ulPadreMenuNavbar li{
+.unorderedListMainMenu li{
   /* border: 2px solid blue; */
   height: 100%;
   display: flex;
 }
 
-.ulPadreMenuNavbar li a{
+.unorderedListMainMenu li a{
   /* border: 2px solid blue; */
   padding: 0px 25px;
   height: 100%;
@@ -120,14 +121,15 @@
   transition: all 0.1s;
 }
 
-.ulPadreMenuNavbar li a:hover{
+.unorderedListMainMenu li a:hover{
   background-color: var(--colorSalmon);
   color: black;
   font-weight: 600;
 }
 
-/* <-----  TÍTULO Y FONDO PRINCIPAL ----> */
-.mainImgFondoPrincipal{
+/* <-----  MAIN TITLE AND MAIN BACKGROUND IMAGE ----> */
+
+.MainBackgroundImage{
   margin-top: 80px;
   width: 100%;
   position: relative;
@@ -135,11 +137,11 @@
   z-index: -1;
 }
 
-.mainImgFondoPrincipal img{
+.MainBackgroundImage img{
   width: 100%;
 }
 
-.divTituloPrincipal{
+.containerMainTitle{
   position: absolute;
   width: 100%;
   top: 50%;
@@ -148,7 +150,7 @@
   text-align: center;
 }
 
-.divTituloPrincipal h1{
+.containerMainTitle h1{
   color: white;
   font-family: var(--fuenteNightmareBeforeChristmas);
   font-size: 6vw;
@@ -156,26 +158,27 @@
 }
 /*<--------------------------------------------> */
 
-/* <------------  PORTADAS PELÍCULAS ----------> */
-.mainPortadasPelis{
+/* <------------  MOVIE COVERS ----------> */
+.mainMovieCovers{
   width: 100%;
   background-image: url("../assets/img/Estrellas.jpg");
   background-size: cover;
   display: flex;
+  justify-content: center;
 }
 
-.sectionPortadaPelis{
-  /* border: 4px solid blue; */
+.movieCoversSection{
+   /*border: 4px solid blue;*/
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   grid-column-gap: 3vw;
   grid-row-gap: 5vh;
   margin: 10vh 3vw;
   justify-items: center;
 }
 
-.portadaPelis{
+.containerMovieCovers{
   position: relative;
   display: flex;
   width: 100%;
@@ -184,16 +187,17 @@
   transition: transform .5s;
 }
 
-.portadaPelis:hover{
+.containerMovieCovers:hover{
   transform: scale(1.15, 1.15);
 }
 
-.portadaPelis img{
+.containerMovieCovers img{
   /* border: 4px solid blue; */
+  display: flex;
   width: 100%;
 }
 
-.botonPelis{
+.buttonMovies{
   width: 5vw;
   height: 3vh;
   box-shadow: 0.5vh 0.5vh 0.5vh black;
@@ -201,7 +205,7 @@
   border-radius: 30px;
 }
 
-.botonPelis a{ 
+.buttonMovies a{ 
   /* border: 4px solid blue; */
   width: 100%;
   /* height: 100%; */
@@ -215,18 +219,18 @@
   font-family: var(--fuenteRuby);
 }
 
-.botonPelisInfo{
+.buttonMoviesInfo{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.botonPelisTrailer{
+.buttonMoviesTrailer{
   position: absolute;
-  top: 60%;
+  top: 64%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -64%);
 }
 
 /*<--------------------------------------------> */
@@ -235,162 +239,180 @@
 /*************** MEDIA QUERY *******************/
 /*---------------------------------------------*/
 
+@media only screen and (max-width: 4096px){
+  
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -63%);
+  }
+}
+
 @media only screen and (max-width: 2500px){
   
-  .sectionPortadaPelis{
-    margin: 9vh 3vw;
-  }
+  
+}
 
-  .portadaPelis{
-    border: 0.9vh solid white;
-    box-shadow: 0.8vh 0.8vh 0.5vh white;
+@media only screen and (max-width: 1920px) and (height: 1440px){
+
+  .buttonMovies{
+    width: 5vw;
+    height: 2.5vh;
   }
 }
 
 @media only screen and (max-width: 1600px){
 
-  .portadaPelis{
-    border: 0.5vh solid white;
-    box-shadow: 0.5vh 0.5vh 0.5vh white;
-  }
+ 
 }
 
 @media only screen and (max-width: 1450px){
   
-  .sectionPortadaPelis{
-    margin: 8vh 3vw;
-  }
+  
 }
 
 @media only screen and (max-width: 1379px){
   
-  .portadaPelis:hover{
-    transform: scale(1.09, 1.09);
-  }
+  
 }
 
 @media only screen and (max-width: 1200px){
   
-  .botonPelis{
-    height: 3vh;
-  }
-
-  .botonPelisTrailer{
-    top: 58%;
-    transform: translate(-50%, -58%);
-  }
+ 
 }
 
 @media only screen and (max-width: 999px){
-  
-  .portadaPelis:hover{
-    transform: scale(1.05, 1.05);
-  }
+ 
 }
 
 @media only screen and (max-width: 950px){
   
-  .botonPelis{
-    width: 6vw;
-    height: 3vh;
-  }
-
-  .botonPelisTrailer{
-    top: 60%;
-    transform: translate(-50%, -60%);
-  }
+  
 }
 
 @media only screen and (max-width: 900px){
   
-  .sectionPortadaPelis{
-    margin: 6vh 3vw;
-  }
+  
 }
 
-@media only screen and (max-width: 852px){
+@media only screen and (max-width: 850px){
   
-  .botonPelis{
-    width: 7vw;
+  .buttonMovies{
+    width: 6vw;
     height: 4vh;
   }
 
-  .botonPelisTrailer{
-    top: 58%;
-    transform: translate(-50%, -58%);
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -62%);
   }
 }
 
-@media only screen and (max-width: 850px) and (orientation: landscape) {
+@media only screen and (max-width: 800px){
   
-  .botonPelis{
-    width: 16vw;
-    height: 9vh;
+   .containerMainMenuNavbar{
+      display: none;
+   }
+
+   .buttonMovies{
+    width: 6vw;
+    height: 3vh;
+  }
+}
+
+@media only screen and (max-width: 768px) and (height: 1024px){
+  
+  .buttonMovies{
+    width: 6vw;
+    height: 2vh;
   }
 
-  .botonPelis a{
-    font-size: 3vw;
-  }
-
-  .botonPelisTrailer{
-    top: 60%;
-    transform: translate(-50%, -60%);
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -64%);
   }
 }
 
 @media only screen and (max-width: 750px){
   
-  .ContainerMenuNavbar{
-    display: none;
+  
+}
+
+@media only screen and (max-width: 720px) and (height: 1280px){
+  
+  .buttonMovies{
+    width: 7vw;
+    height: 1.5vh;
   }
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 640px){
   
-  .sectionPortadaPelis{
-    margin: 4vh 3vw;
+  .buttonMovies{
+    width: 7vw;
+    height: 4vh;
   }
-
-  .portadaPelis{
-    border: 0.5vh solid white;
-    box-shadow: 0.3vh 0.3vh 0.5vh white;
+  
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
   }
 }
 
-@media only screen and (max-width: 537px){
+@media only screen and (max-width: 640px) and (height: 960px){
   
-  .portadaPelis:hover{
-    transform: scale(1.01, 1.01);
+  .buttonMovies{
+    width: 7vw;
+    height: 2vh;
+  }
+  
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+  }
+}
+
+@media only screen and (max-width: 600px) and (height: 1024px){
+
+  .buttonMovies{
+    width: 11vw;
+    height: 2vh;
+  }
+
+  .buttonMovies a{
+    font-size: 1.5vw;
+  }
+
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -64%);
   }
 }
 
 @media only screen and (max-width: 549px){
   
-  .sectionPortadaPelis{
-    margin: 5vh 4vw;
-  }
+  
+}
 
-  .botonPelis{
-    width: 22vw;
-    height: 5vh;
-  }
-
-  .botonPelisTrailer{
-    top: 60%;
-    transform: translate(-50%, -60%);
-  }
-
-  .botonPelis a{
-    font-size: 4vw;
-  }
+@media only screen and (max-width: 537px){
+  
+  
 }
 
 @media only screen and (max-width: 520px){
   
-  .botonPelis{
-    width: 22vw;
-    height: 5vh;
-  }
+ 
 }
 
 @media only screen and (max-width: 500px){
@@ -400,10 +422,12 @@
 
 @media only screen and (max-width: 450px){
   
-  .botonPelis{
-    width: 22vw;
-    height: 4vh;
-  }
+  
+}
+
+@media only screen and (max-width: 426px){
+  
+  
 }
 
 @media only screen and (max-width: 410px){
@@ -413,28 +437,71 @@
 
 @media only screen and (max-width: 400px){
 
-  .divTituloPrincipal h1{
-    text-shadow: 0.2vh 0.2vh 0.1vh black;
-  }
-  
-  .portadaPelis{
-    border: 0.3vh solid white;
-    box-shadow: 0.2vh 0.2vh 0.4vh white;
+  .movieCoversSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4vh 0vw;
   }
 
-  .botonPelisTrailer{
-    position: absolute;
-    top: 62%;
-    left: 50%;
-    transform: translate(-50%, -62%);
+  .containerMovieCovers{
+    display: flex;
+    width: 85%;
   }
 }
 
-@media only screen and (max-width: 350px){
+@media only screen and (max-width: 360px){
 
-  .botonPelisTrailer{
-    top: 65%;
-    transform: translate(-50%, -65%);
+  .buttonMovies{
+    width: 17vw;
+    height: 3.5vh;
+  }
+  
+  .buttonMovies a{
+    font-size: 3vw;
+  }
+  
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -61%);
+  } 
+}
+
+@media only screen and (max-width: 320px) and (height: 240px){
+  .buttonMovies{
+    width: 15vw;
+    height: 8vh;
+  }
+
+  .buttonMovies a{
+    font-size: 3vw;
+  }
+
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+  }
+}
+
+@media only screen and (max-width: 320px) and (height: 480px){
+  .buttonMovies{
+    width: 16vw;
+    height: 4vh;
+  }
+
+  .buttonMovies a{
+    font-size: 3vw;
+  }
+
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -58%);
   }
 }
 
@@ -446,8 +513,15 @@
 
 @media only screen and (max-width: 258px){
   
-  .portadaPelis{
-    width: 90%;
+  
+}
+
+@media only screen and (max-width: 215px){
+  
+  .movieCoversSection{
+    display: flex;
+    flex-direction: column;
+    margin: 3vh 10vw;
   }
 }
 

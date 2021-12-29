@@ -12,6 +12,20 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'Oooh Baby';
+  src: url('../assets/fonts/OoohBaby-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Love Light';
+  src: url('../assets/fonts/LoveLight-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
 *{
   margin: 0px;
   padding: 0px;
@@ -20,14 +34,12 @@
 }
 
 :root{
-  /* --fuenteOoohBaby: 'Oooh Baby'; */
-  /* --fuenteLoveLight: 'Love Light', cursive; */
+  --fuenteOoohBaby: 'Oooh Baby';
+  --fuenteLoveLight: 'Love Light', cursive;
   --fuenteRuby: 'Rubik', sans-serif;
   --fuenteNightmareBeforeChristmas: 'Nightmare Before Christmas';
   --colorFondoNavbar: black;
   --colorSalmon: hsl(0, 98%, 78%);
-  /* --colorSalmonClaro: hsl(0, 59%, 88%); */
-  /* --colorSangre: hsl(0,100%,40%); */
 }
 
 .navbar{
@@ -94,20 +106,17 @@
 }
 
 .unorderedListMainMenu{
-  /* border: 2px solid red; */
   height: 100%;
   display: flex;
   list-style: none;
 }
 
 .unorderedListMainMenu li{
-  /* border: 2px solid blue; */
   height: 100%;
   display: flex;
 }
 
 .unorderedListMainMenu li a{
-  /* border: 2px solid blue; */
   padding: 0px 25px;
   height: 100%;
   display: flex;
@@ -168,7 +177,6 @@
 }
 
 .movieCoversSection{
-   /*border: 4px solid blue;*/
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -192,7 +200,6 @@
 }
 
 .containerMovieCovers img{
-  /* border: 4px solid blue; */
   display: flex;
   width: 100%;
 }
@@ -206,9 +213,7 @@
 }
 
 .buttonMovies a{ 
-  /* border: 4px solid blue; */
   width: 100%;
-  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,6 +236,98 @@
   top: 64%;
   left: 50%;
   transform: translate(-50%, -64%);
+}
+/*<--------------------------------------------> */
+
+/* <------------  PERSONAL DATA ----------> */
+.personalDataSection{
+  border: 4px solid blue;
+  width: 100%;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../assets/img/PortadaPelis.png");
+  background-size: cover;
+  font-family: var(--fuenteLoveLight);
+  color: white;
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.containerTitlePersonalData{
+  border: 4px solid red;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh 0vw 5vh 0vw;
+}
+
+.containerTitlePersonalData h1{
+  font-size: 6vw;
+  text-shadow: 0.3vw 0.3vw 0.3vw black;
+}
+
+.containerOfPersonalDataAndLocation{
+  border: 4px solid red;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-column-gap: 3vw;
+  grid-row-gap: 5vh;
+  /* margin: 0vh 0vw; */
+  justify-items: center;
+}
+
+.containerPersonalData{
+  border: 4px solid blue;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.containerPersonalData h3{
+  border: 4px solid blue;
+  font-size: 3.5vw;
+  text-shadow: 0.3vw 0.3vw 0.3vw black;
+  margin-bottom: 2vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.containerData{
+  border: 4px solid red;
+  display: flex;
+  padding-left: 2vw;
+}
+
+.containerLogos{
+  width: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerLogos img{
+  display: flex;
+  width: 100%;
+}
+
+.iframeAzulMap{
+  padding: 2vw;
+}
+
+.containerInformationInText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerInformationInText h4{
+  font-size: 1.8vw;
+  text-shadow: 0.3vw 0.3vw 0.3vw black;
+  padding-left: 2vw;
 }
 
 /*<--------------------------------------------> */
@@ -282,8 +379,25 @@
  
 }
 
-@media only screen and (max-width: 999px){
- 
+@media only screen and (max-width: 1024px) and (min-height: 1100px){
+  
+  .movieCoversSection{
+    margin: 5vh 3vw;
+  }
+
+  .containerMovieCovers{
+    border: 0.5vh solid white;
+    box-shadow: 0.7vh 0.7vh 0.4vh white;
+  }
+
+  .buttonMovies{
+    width: 7vw;
+    height: 1.5vh;
+  }
+
+  .buttonMovies a{
+    font-size: 1vw;
+  }
 }
 
 @media only screen and (max-width: 950px){
@@ -298,6 +412,10 @@
 
 @media only screen and (max-width: 850px){
   
+  .containerMovieCovers:hover{
+    transform: scale(1.10, 1.10);
+  }
+  
   .buttonMovies{
     width: 6vw;
     height: 4vh;
@@ -311,7 +429,36 @@
   }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 820px) and (min-height: 1024px){
+
+  .movieCoversSection{
+    margin: 6vh 3vw;
+    grid-row-gap: 4vh;
+  }
+  
+  .containerMovieCovers{
+    border: 0.5vh solid white;
+    box-shadow: 0.7vh 0.7vh 0.4vh white;
+  }
+  
+  .buttonMovies{
+    width: 8vw;
+    height: 2vh;
+  }
+
+  .buttonMovies a{
+    font-size: 1.2vw;
+  }
+
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+  } 
+}
+
+@media only screen and (max-width: 800px) and (max-height: 1000px){
   
    .containerMainMenuNavbar{
       display: none;
@@ -324,6 +471,14 @@
 }
 
 @media only screen and (max-width: 768px) and (height: 1024px){
+  
+  .movieCoversSection{
+   margin: 6vh 3vw;
+ }
+  
+  .containerMovieCovers{
+    border: 0.5vh solid white;
+  }
   
   .buttonMovies{
     width: 6vw;
@@ -345,6 +500,14 @@
 
 @media only screen and (max-width: 720px) and (height: 1280px){
   
+  .movieCoversSection{
+    margin: 6vh 3vw;
+  }
+   
+   .containerMovieCovers{
+     border: 0.5vh solid white;
+  }
+  
   .buttonMovies{
     width: 7vw;
     height: 1.5vh;
@@ -352,6 +515,11 @@
 }
 
 @media only screen and (max-width: 640px){
+  
+  .movieCoversSection{
+    margin: 13vh 3vw;
+    grid-row-gap: 9vh;
+  }
   
   .buttonMovies{
     width: 7vw;
@@ -368,6 +536,14 @@
 
 @media only screen and (max-width: 640px) and (height: 960px){
   
+  .movieCoversSection{
+    margin: 6vh 3vw;
+  }
+   
+   .containerMovieCovers{
+     border: 0.5vh solid white;
+  }
+  
   .buttonMovies{
     width: 7vw;
     height: 2vh;
@@ -383,6 +559,11 @@
 
 @media only screen and (max-width: 600px) and (height: 1024px){
 
+  .movieCoversSection{
+    margin: 7vh 3vw;
+    grid-row-gap: 4.5vh;
+  }
+  
   .buttonMovies{
     width: 11vw;
     height: 2vh;
@@ -400,9 +581,25 @@
   }
 }
 
-@media only screen and (max-width: 549px){
+@media only screen and (max-width: 540px) and (min-height: 700px){
   
+  .movieCoversSection{
+    margin: 7vh 4vw;
+    grid-row-gap: 5.5vh;
+  }
   
+  .containerMovieCovers:hover{
+    transform: scale(1.08, 1.08);
+  }
+
+  .buttonMovies{
+    width: 14vw;
+    height: 3.5vh;
+  }
+
+  .buttonMovies a{
+    font-size: 2.5vw;
+  }
 }
 
 @media only screen and (max-width: 537px){
@@ -425,14 +622,37 @@
   
 }
 
-@media only screen and (max-width: 426px){
-  
-  
-}
+@media only screen and (max-width: 430px) and (min-height: 730px){
 
-@media only screen and (max-width: 410px){
-  
-  
+  .movieCoversSection{
+    margin: 6vh 3vw;
+    grid-row-gap: 4vh;
+  }
+
+  .containerMovieCovers{
+    border: 0.6vh solid white;
+    box-shadow: 0.7vh 0.7vh 0.4vh white;
+  }
+
+  .containerMovieCovers:hover{
+    transform: scale(1.06, 1.06);
+  }
+
+  .buttonMovies{
+    width: 16vw;
+    height: 2.5vh;
+  }
+
+  .buttonMovies a{
+    font-size: 2.5vw;
+  }
+
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+  } 
 }
 
 @media only screen and (max-width: 400px){
@@ -441,26 +661,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4vh 0vw;
+    margin: 6vh 0vw;
+  }
+
+  .containerMovieCovers:hover{
+    transform: scale(1.05, 1.05);
   }
 
   .containerMovieCovers{
     display: flex;
     width: 85%;
   }
-}
-
-@media only screen and (max-width: 360px){
 
   .buttonMovies{
-    width: 17vw;
-    height: 3.5vh;
+    width: 23vw;
+    height: 4vh;
   }
-  
+
   .buttonMovies a{
-    font-size: 3vw;
+    font-size: 4vw;
   }
-  
+
   .buttonMoviesTrailer{
     position: absolute;
     top: 61%;
@@ -470,6 +691,11 @@
 }
 
 @media only screen and (max-width: 320px) and (height: 240px){
+  .movieCoversSection{
+    margin: 12vh 3vw;
+    grid-row-gap: 8vh;
+  }
+  
   .buttonMovies{
     width: 15vw;
     height: 8vh;
@@ -518,16 +744,26 @@
 
 @media only screen and (max-width: 215px){
   
-  .movieCoversSection{
-    display: flex;
-    flex-direction: column;
-    margin: 3vh 10vw;
-  }
+  
 }
 
 @media only screen and (max-width: 200px){
   
-  
+  .buttonMovies{
+    width: 28vw;
+    height: 3.5vh;
+  }
+
+  .buttonMovies a{
+    font-size: 5vw;
+  }
+
+  .buttonMoviesTrailer{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -64%);
+  }
 }
 
 @media only screen and (max-width: 150px){

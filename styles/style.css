@@ -91,6 +91,12 @@
 }
 /*<--------------------------------------------> */
 
+/* <----------  HIDE HAMBURGER MENU  ----------------> */
+.containerHamburgerMenu{
+  display: none;
+}
+/*<--------------------------------------------> */
+
 /* --------  MAIN MENU NAVBAR  ---------------- */
 .containerMainMenuNavbar {
   /* border: 2px solid red; */
@@ -111,7 +117,7 @@
   height: 100%;
   display: flex;
   background-color: black;
-  width: 9vw;
+  width: 8vw;
 }
 
 .unOrderedListMainMenu li a {
@@ -125,7 +131,7 @@
   font-family: var(--fuenteRuby);
   font-weight: 600;
   letter-spacing: 1.5px;
-  font-size: 1.2vw;
+  font-size: 0.9vw;
   color: white;
   text-decoration: none;
   transition: all 0.3s;
@@ -152,45 +158,24 @@
   }
 }
 
-.linkItemList:hover{
-  animation-play-state: paused;
-  border: 1px solid white;
-  background-color: var(--colorSalmon);
-  color: black;
-  font-weight: 600;
-  font-size: 1.3vw;
-}
-
-.linkItemSubList:hover{
-  background-color: var(--colorSalmon);
-  color: black;
-  font-weight: 600;
-}
-
 .unOrderedSubListItemListInicio {
   position: absolute;
-  height: 80px;
+  height: 6vh;
   top: 80px;
   left: 0px;
   display: none;
 }
 
+.itemListMainMenu a:hover{
+  border: 1px solid white;
+  background-color: var(--colorSalmon);
+  color: black;
+  font-weight: 600;
+  font-size: 1.1vw;
+}
+
 .itemListInicio:hover > .unOrderedSubListItemListInicio{
   display: block;
-}
-
-.unOrderedSubListItemListInicio li a:hover{
-  border: 1px solid white;
-}
-/*<--------------------------------------------> */
-
-/* <----------  HIDE HAMBURGER MENU  ----------------> */
-.containerHamburgerMenu {
-  display: none;
-}
-
-.containerUnOrderedListHamburgerMenu {
-  display: none;
 }
 /*<--------------------------------------------> */
 
@@ -443,26 +428,11 @@
   }
 }
 
-@media only screen and (max-width: 2500px) {
-}
-
 @media only screen and (max-width: 1920px) and (height: 1440px) {
   .buttonMovies {
     width: 5vw;
     height: 2.5vh;
   }
-}
-
-@media only screen and (max-width: 1600px) {
-}
-
-@media only screen and (max-width: 1450px) {
-}
-
-@media only screen and (max-width: 1379px) {
-}
-
-@media only screen and (max-width: 1200px) {
 }
 
 @media only screen and (max-width: 1024px) and (min-height: 1100px) {
@@ -483,12 +453,6 @@
   .buttonMovies a {
     font-size: 1vw;
   }
-}
-
-@media only screen and (max-width: 950px) {
-}
-
-@media only screen and (max-width: 900px) {
 }
 
 @media only screen and (max-width: 850px) {
@@ -542,13 +506,7 @@
   .containerMainMenuNavbar {
     display: none;
   }
-
-  .containerHamburgerMenu {
-    border: 2px solid red;
-    display: block;
-    width: 20%;
-  }
-
+  
   .buttonMovies {
     width: 7vw;
     height: 2vh;
@@ -560,10 +518,94 @@
     display: none;
   }
 
-  .containerHamburgerMenu {
-    border: 2px solid red;
+  .containerHamburgerMenu{
     display: block;
-    width: 20%;
+  }
+
+  .navbar {
+    justify-content: space-around;
+  }
+  
+  .containerHamburgerMenu {
+    /* border: 2px solid red; */
+    position: relative;
+    width: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .containerHamburgerMenu label{
+    width: 45px;
+    height: 30px;
+  }
+  
+  .containerImageHamburgerMenu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .containerImageHamburgerMenu span{
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 3px;
+  }
+  
+  .containerUnOrderedListHamburgerMenu{
+    width: 115px;
+    position: absolute;
+    top: 53px;
+    left: -2px;
+  }
+  
+  .labelHamburgerMenu{
+    display: none;
+  }
+  
+  .unOrderedListHamburgerMenu{
+    width: 100%;
+    
+    background-color: black;
+  }
+  
+  .unOrderedListHamburgerMenu li{
+    width: 100%;
+    height: 70px;
+    list-style: none;
+  }
+  
+  .unOrderedListHamburgerMenu li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: var(--fuenteRuby);
+  }
+
+  .unOrderedListHamburgerMenu li a:hover{
+    border: 1px solid white;
+    background-color: var(--colorSalmon);
+    color: black;
+  }
+  
+  .unOrderedListHamburgerMenu{
+    display: none;
+  }
+  
+  .labelHamburgerMenu:checked ~ .unOrderedListHamburgerMenu{
+    display: block;
   }
 }
 
@@ -693,18 +735,6 @@
   .buttonMovies a {
     font-size: 2.5vw;
   }
-}
-
-@media only screen and (max-width: 537px) {
-}
-
-@media only screen and (max-width: 520px) {
-}
-
-@media only screen and (max-width: 500px) {
-}
-
-@media only screen and (max-width: 450px) {
 }
 
 @media only screen and (max-width: 430px) and (min-height: 730px) {
@@ -928,13 +958,22 @@
   }
 }
 
-@media only screen and (max-width: 300px) {
-}
-
-@media only screen and (max-width: 258px) {
-}
-
-@media only screen and (max-width: 215px) {
+@media only screen and (max-width: 320px) {
+  .containerHamburgerMenu {
+    width: 90px;
+  }
+  
+  .containerHamburgerMenu label{
+    width: 35px;
+  }
+  
+  .containerUnOrderedListHamburgerMenu{
+    width: 90px;
+  }
+  
+  .unOrderedListHamburgerMenu li{
+    height: 30px;
+  }
 }
 
 @media only screen and (max-width: 200px) {
@@ -953,13 +992,4 @@
     left: 50%;
     transform: translate(-50%, -64%);
   }
-}
-
-@media only screen and (max-width: 150px) {
-}
-
-@media only screen and (max-width: 125px) {
-}
-
-@media only screen and (max-width: 110px) {
 }

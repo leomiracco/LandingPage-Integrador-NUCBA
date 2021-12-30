@@ -29,13 +29,13 @@
       </label>
 
       <div class="containerUnOrderedListHamburgerMenu">
-        <input type="checkbox" id="labelHamburgerMenu" class="inputMenu">
-        <ul class="unorderedListHamburgerMenu">
+        <input type="checkbox" id="labelHamburgerMenu" class="labelHamburgerMenu">
+        <ul class="unOrderedListHamburgerMenu">
           <li><a class="" href="#">INICIO</a></li>
           <li><a class="" href="#">NOTICIAS</a></li>
           <li><a class="" href="#">APP</a></li>
           <li><a class="" href="#">NOSOTROS</a></li>
-          <li class="ItemListContacto"><a class="" href="#">CONTACTO</a></li>
+          <li class="ItemListContacto"><a class="" href="#contact">CONTACTO</a></li>
         </ul>
       </div>
     </div>
@@ -46,17 +46,17 @@
       <ul class="unOrderedListMainMenu">
         <li class="itemListMainMenu itemListInicio"><a class="linkItemList linkItemListInicio" href="#">INICIO</a>
           <ul class="unOrderedSubListItemListInicio" >
-            <li class="itemSubList itemSubListOne"><a class="linkItemSubList linkItemSubListOne" href="#imgFondo2">IMAGEN DE FONDO</a></li>
-            <li class="itemSubList"><a class="linkItemSubList" href="#">SECCIÓN 2</a></li>
-            <li class="itemSubList"><a class="linkItemSubList" href="#">SECCIÓN 3</a></li>
-            <li class="itemSubList"><a class="linkItemSubList" href="#">SECCIÓN 4</a></li>
+            <li class="itemSubList itemSubListOne"><a class="linkItemSubList linkItemSubListOne" href="#mainTitle">TÍTULO PRINCIPAL</a></li>
+            <li class="itemSubList"><a class="linkItemSubList" href="#movieCovers">MOVIE COVERS</a></li>
+            <li class="itemSubList"><a class="linkItemSubList" href="#personalInfo">INFORMACIÓN PESONAL</a></li>
+            <li class="itemSubList"><a class="linkItemSubList" href="#contact">CONTACTO</a></li>
             <li class="itemSubList itemSubListFive"><a class="linkItemSubList" href="#">SECCIÓN 5</a></li>
           </ul>
         </li>
         <li class="itemListMainMenu"><a class="linkItemList" href="#">NOTICIAS</a></li>
         <li class="itemListMainMenu"><a class="linkItemList" href="#">APP</a></li>
-        <li class="itemListMainMenu"><a class="linkItemList" href="#">NOSOTROS</a></li>
-        <li class="itemListMainMenu"><a class="linkItemList" href="#">CONTACTO</a></li>
+        <li class="itemListMainMenu"><a class="linkItemList" href="#personalInfo">NOSOTROS</a></li>
+        <li class="itemListMainMenu"><a class="linkItemList" href="#contact">CONTACTO</a></li>
       </ul>
     </div>
 
@@ -64,7 +64,7 @@
   <!-------------------------------------------->
 
   <!-- <-----  MAIN TITLE AND MAIN BACKGROUND IMAGE  ---->
-  <main class="mainBackgroundImage">
+  <main class="mainBackgroundImage" id="mainTitle">
     
     <img src="./assets/img/Freddy.jpg" alt="">
 
@@ -145,7 +145,7 @@
   <!-------------------------------------------->
 
   <!-----------------  PERSONAL DATA ------------->
-  <section class="personalDataSection">
+  <section class="personalDataSection" id="personalInfo">
     <div class="containerTitlePersonalData">
       <h1>Contact Us</h1>
     </div>
@@ -222,7 +222,7 @@
   
       <div class="containerLogoSocialNetworks containerLogoVercel">
         <a href="" target="_alt">
-          <img src="./assets/img/LogoVercel.png" alt="">
+          <img id="contact" src="./assets/img/LogoVercel.png" alt="">
         </a>
       </div>
     </footer>

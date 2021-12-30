@@ -99,21 +99,18 @@
 
 /* --------  MAIN MENU NAVBAR  ---------------- */
 .containerMainMenuNavbar {
-  /* border: 2px solid red; */
   position: relative;
   height: 100%;
   align-items: center;
 }
 
 .unOrderedListMainMenu {
-  /* border: 2px solid blue; */
   height: 100%;
   display: flex;
   list-style: none;
 }
 
 .unOrderedListMainMenu li {
-  /* border: 2px solid red; */
   height: 100%;
   display: flex;
   background-color: black;
@@ -121,7 +118,6 @@
 }
 
 .unOrderedListMainMenu li a {
-  /* padding: 0px 25px; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -285,12 +281,11 @@
 
 /* <------------  PERSONAL DATA ----------> */
 .personalDataSection {
-  border: 4px solid blue;
   width: 100%;
   background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
     url("../assets/img/PortadaPelis.png");
   background-size: cover;
-  font-family: var(--fuenteLoveLight);
+  font-family: var(--fuenteRuby);
   color: white;
   letter-spacing: 3px;
   display: flex;
@@ -299,7 +294,6 @@
 }
 
 .containerTitlePersonalData {
-  border: 4px solid red;
   width: 100%;
   display: flex;
   align-items: center;
@@ -313,7 +307,6 @@
 }
 
 .containerOfPersonalDataAndLocation {
-  border: 4px solid red;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -323,7 +316,6 @@
 }
 
 .containerPersonalData {
-  border: 4px solid blue;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -331,7 +323,6 @@
 }
 
 .containerPersonalData h3 {
-  border: 4px solid blue;
   font-size: 3.5vw;
   text-shadow: 0.3vw 0.3vw 0.3vw black;
   margin-bottom: 2vh;
@@ -341,9 +332,13 @@
 }
 
 .containerData {
-  border: 4px solid red;
   display: flex;
   padding-left: 2vw;
+  margin-bottom: 10px;
+}
+
+.containerLogoLocationAddress{
+  margin-top: 30px;
 }
 
 .containerLogos {
@@ -385,7 +380,6 @@
 /*<---------  SOCIAL NETWORKS ----------------->*/
 
 .socialNetworksAtTheFootOfThePage {
-  border: 4px solid blue;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -432,6 +426,12 @@
   .buttonMovies {
     width: 5vw;
     height: 2.5vh;
+  }
+}
+
+@media only screen and (max-width: 1366px){
+  .unOrderedSubListItemListInicio li {
+    height: 70px;
   }
 }
 
@@ -527,7 +527,6 @@
   }
   
   .containerHamburgerMenu {
-    /* border: 2px solid red; */
     position: relative;
     width: 115px;
     display: flex;
@@ -631,9 +630,6 @@
   }
 }
 
-@media only screen and (max-width: 750px) {
-}
-
 @media only screen and (max-width: 720px) and (height: 1280px) {
   .movieCoversSection {
     margin: 6vh 3vw;
@@ -669,6 +665,22 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%, -60%);
+  }
+
+  .containerHamburgerMenu {
+    width: 90px;
+  }
+  
+  .containerHamburgerMenu label{
+    width: 35px;
+  }
+  
+  .containerUnOrderedListHamburgerMenu{
+    width: 90px;
+  }
+  
+  .unOrderedListHamburgerMenu li{
+    height: 30px;
   }
 }
 
@@ -955,24 +967,6 @@
     top: 58%;
     left: 50%;
     transform: translate(-50%, -58%);
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .containerHamburgerMenu {
-    width: 90px;
-  }
-  
-  .containerHamburgerMenu label{
-    width: 35px;
-  }
-  
-  .containerUnOrderedListHamburgerMenu{
-    width: 90px;
-  }
-  
-  .unOrderedListHamburgerMenu li{
-    height: 30px;
   }
 }
 

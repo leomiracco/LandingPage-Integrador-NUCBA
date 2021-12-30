@@ -1,48 +1,49 @@
 @font-face {
-  font-family: 'Rubik';
-  src: url('../assets/fonts/Rubik-Regular.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("../assets/fonts/Rubik-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Nightmare Before Christmas';
-  src: url('../assets/fonts/Nightmare-Before-Christmas.ttf') format('truetype');
+  font-family: "Nightmare Before Christmas";
+  src: url("../assets/fonts/Nightmare-Before-Christmas.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Oooh Baby';
-  src: url('../assets/fonts/OoohBaby-Regular.ttf') format('truetype');
+  font-family: "Oooh Baby";
+  src: url("../assets/fonts/OoohBaby-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Love Light';
-  src: url('../assets/fonts/LoveLight-Regular.ttf') format('truetype');
+  font-family: "Love Light";
+  src: url("../assets/fonts/LoveLight-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-:root{
-  --fuenteOoohBaby: 'Oooh Baby';
-  --fuenteLoveLight: 'Love Light', cursive;
-  --fuenteRuby: 'Rubik', sans-serif;
-  --fuenteNightmareBeforeChristmas: 'Nightmare Before Christmas';
+:root {
+  --fuenteOoohBaby: "Oooh Baby";
+  --fuenteLoveLight: "Love Light", cursive;
+  --fuenteRuby: "Rubik", sans-serif;
+  --fuenteNightmareBeforeChristmas: "Nightmare Before Christmas";
   --colorFondoNavbar: black;
   --colorSalmon: hsl(0, 98%, 78%);
 }
 
-.navbar{
+/* --------  STYLES NAVBAR  ---------------- */
+.navbar {
   width: 100%;
   height: 80px;
   position: fixed;
@@ -55,13 +56,13 @@
   z-index: 1;
 }
 
-.containerLogoNavbar{
+.containerLogoNavbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.containerLogoNavbar img{
+.containerLogoNavbar img {
   width: 100%;
   min-width: 50px;
   max-width: 70px;
@@ -71,74 +72,130 @@
   animation-timing-function: linear;
 }
 
-@keyframes zoomLogo{
-  0%{
-      transform: scale(0.3, 0.3);
-  }1%{
-      transform: rotateZ(0deg);
-  }10%{
-      transform: rotateZ(360deg);
-  }30%{
-      transform: scale(0.5, 0.5);
+@keyframes zoomLogo {
+  0% {
+    transform: scale(0.3, 0.3);
   }
-  100%{
-      transform: scale(1.00, 1.00);
+  1% {
+    transform: rotateZ(0deg);
   }
-}
-
-/* <----------  HIDE HAMBURGER MENU  ----------------> */
-.containerHamburgerMenu{
-  display: none;
-}
-
-.containerUnorderedListHamburgerMenu{
-  display: none;
-}
-
-.unorderedSubListItemListInicio{
-  display: none;
+  10% {
+    transform: rotateZ(360deg);
+  }
+  30% {
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 /*<--------------------------------------------> */
 
-.containerMainMenuNavbar{
+/* --------  MAIN MENU NAVBAR  ---------------- */
+.containerMainMenuNavbar {
+  /* border: 2px solid red; */
+  position: relative;
   height: 100%;
   align-items: center;
 }
 
-.unorderedListMainMenu{
+.unOrderedListMainMenu {
+  /* border: 2px solid blue; */
   height: 100%;
   display: flex;
   list-style: none;
 }
 
-.unorderedListMainMenu li{
+.unOrderedListMainMenu li {
+  /* border: 2px solid red; */
   height: 100%;
   display: flex;
+  background-color: black;
+  width: 9vw;
 }
 
-.unorderedListMainMenu li a{
-  padding: 0px 25px;
+.unOrderedListMainMenu li a {
+  /* padding: 0px 25px; */
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: var(--fuenteRuby);
   font-weight: 600;
   letter-spacing: 1.5px;
+  font-size: 1.2vw;
   color: white;
   text-decoration: none;
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 
-.unorderedListMainMenu li a:hover{
+.linkItemListInicio{
+  animation-name: changeColor;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes changeColor {
+  0% {
+    color: black;
+    background-color: var(--colorSalmon);
+  }
+  50% {
+    color: black;
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.linkItemList:hover{
+  animation-play-state: paused;
+  border: 1px solid white;
+  background-color: var(--colorSalmon);
+  color: black;
+  font-weight: 600;
+  font-size: 1.3vw;
+}
+
+.linkItemSubList:hover{
   background-color: var(--colorSalmon);
   color: black;
   font-weight: 600;
 }
 
-/* <-----  MAIN TITLE AND MAIN BACKGROUND IMAGE ----> */
+.unOrderedSubListItemListInicio {
+  position: absolute;
+  height: 80px;
+  top: 80px;
+  left: 0px;
+  display: none;
+}
 
-.MainBackgroundImage{
+.itemListInicio:hover > .unOrderedSubListItemListInicio{
+  display: block;
+}
+
+.unOrderedSubListItemListInicio li a:hover{
+  border: 1px solid white;
+}
+/*<--------------------------------------------> */
+
+/* <----------  HIDE HAMBURGER MENU  ----------------> */
+.containerHamburgerMenu {
+  display: none;
+}
+
+.containerUnOrderedListHamburgerMenu {
+  display: none;
+}
+/*<--------------------------------------------> */
+
+/* <-----  MAIN TITLE AND MAIN BACKGROUND IMAGE ----> */
+.mainBackgroundImage {
   margin-top: 80px;
   width: 100%;
   position: relative;
@@ -146,11 +203,11 @@
   z-index: -1;
 }
 
-.MainBackgroundImage img{
+.mainBackgroundImage img {
   width: 100%;
 }
 
-.containerMainTitle{
+.containerMainTitle {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -159,7 +216,7 @@
   text-align: center;
 }
 
-.containerMainTitle h1{
+.containerMainTitle h1 {
   color: white;
   font-family: var(--fuenteNightmareBeforeChristmas);
   font-size: 6vw;
@@ -168,7 +225,7 @@
 /*<--------------------------------------------> */
 
 /* <------------  MOVIE COVERS ----------> */
-.mainMovieCovers{
+.mainMovieCovers {
   width: 100%;
   background-image: url("../assets/img/Estrellas.jpg");
   background-size: cover;
@@ -176,7 +233,7 @@
   justify-content: center;
 }
 
-.movieCoversSection{
+.movieCoversSection {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -186,27 +243,27 @@
   justify-items: center;
 }
 
-.containerMovieCovers{
+.containerMovieCovers {
   position: relative;
   display: flex;
   width: 100%;
   border: 1vh solid white;
   box-shadow: 1vh 1vh 1vh white;
-  transition: transform .5s;
+  transition: transform 0.5s;
   border-radius: 20px;
 }
 
-.containerMovieCovers:hover{
+.containerMovieCovers:hover {
   transform: scale(1.15, 1.15);
 }
 
-.containerMovieCovers img{
+.containerMovieCovers img {
   display: flex;
   border-radius: 20px;
   width: 100%;
 }
 
-.buttonMovies{
+.buttonMovies {
   width: 5vw;
   height: 3vh;
   box-shadow: 0.5vh 0.5vh 0.5vh black;
@@ -214,7 +271,7 @@
   border-radius: 30px;
 }
 
-.buttonMovies a{ 
+.buttonMovies a {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -226,14 +283,14 @@
   font-family: var(--fuenteRuby);
 }
 
-.buttonMoviesInfo{
+.buttonMoviesInfo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.buttonMoviesTrailer{
+.buttonMoviesTrailer {
   position: absolute;
   top: 64%;
   left: 50%;
@@ -242,10 +299,11 @@
 /*<--------------------------------------------> */
 
 /* <------------  PERSONAL DATA ----------> */
-.personalDataSection{
+.personalDataSection {
   border: 4px solid blue;
   width: 100%;
-  background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../assets/img/PortadaPelis.png");
+  background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
+    url("../assets/img/PortadaPelis.png");
   background-size: cover;
   font-family: var(--fuenteLoveLight);
   color: white;
@@ -255,7 +313,7 @@
   justify-content: center;
 }
 
-.containerTitlePersonalData{
+.containerTitlePersonalData {
   border: 4px solid red;
   width: 100%;
   display: flex;
@@ -264,12 +322,12 @@
   margin: 5vh 0vw 5vh 0vw;
 }
 
-.containerTitlePersonalData h1{
+.containerTitlePersonalData h1 {
   font-size: 6vw;
   text-shadow: 0.3vw 0.3vw 0.3vw black;
 }
 
-.containerOfPersonalDataAndLocation{
+.containerOfPersonalDataAndLocation {
   border: 4px solid red;
   width: 100%;
   display: grid;
@@ -279,7 +337,7 @@
   justify-items: center;
 }
 
-.containerPersonalData{
+.containerPersonalData {
   border: 4px solid blue;
   width: 100%;
   display: flex;
@@ -287,7 +345,7 @@
   justify-content: space-between;
 }
 
-.containerPersonalData h3{
+.containerPersonalData h3 {
   border: 4px solid blue;
   font-size: 3.5vw;
   text-shadow: 0.3vw 0.3vw 0.3vw black;
@@ -297,42 +355,42 @@
   text-align: center;
 }
 
-.containerData{
+.containerData {
   border: 4px solid red;
   display: flex;
   padding-left: 2vw;
 }
 
-.containerLogos{
+.containerLogos {
   width: 1.5vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.containerLogos img{
+.containerLogos img {
   display: flex;
   width: 100%;
 }
 
-.iframeAzulMap{
+.iframeAzulMap {
   padding: 2vh 2vw 2vh 0vw;
   border-radius: 20px;
 }
 
-.iframeAzulMap iframe{
+.iframeAzulMap iframe {
   border-radius: 20px;
   border: 0.5vh solid black;
   box-shadow: 0.5vh 0.5vh 0.5vh grey;
 }
 
-.containerInformationInText{
+.containerInformationInText {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.containerInformationInText h4{
+.containerInformationInText h4 {
   font-size: 2vw;
   text-shadow: 0.3vw 0.3vw 0.3vw black;
   padding-left: 2vw;
@@ -341,7 +399,7 @@
 
 /*<---------  SOCIAL NETWORKS ----------------->*/
 
-.socialNetworksAtTheFootOfThePage{
+.socialNetworksAtTheFootOfThePage {
   border: 4px solid blue;
   display: flex;
   justify-content: center;
@@ -349,7 +407,7 @@
   margin-top: 10vh;
 }
 
-.containerLogo{
+.containerLogoSocialNetworks {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,17 +415,17 @@
   margin-right: 2vw;
 }
 
-.containerLogoVercel{
+.containerLogoVercel {
   width: 13vw;
   border-radius: 15px;
 }
 
-.containerLogo img{
+.containerLogoSocialNetworks img {
   display: flex;
   width: 100%;
 }
 
-.containerLogoVercel img{
+.containerLogoVercel img {
   border-radius: 15px;
 }
 /*<-------------------------------------------->*/
@@ -376,9 +434,8 @@
 /*************** MEDIA QUERY *******************/
 /*---------------------------------------------*/
 
-@media only screen and (max-width: 4096px){
-  
-  .buttonMoviesTrailer{
+@media only screen and (max-width: 4096px) {
+  .buttonMoviesTrailer {
     position: absolute;
     top: 63%;
     left: 50%;
@@ -386,82 +443,65 @@
   }
 }
 
-@media only screen and (max-width: 2500px){
-  
-  
+@media only screen and (max-width: 2500px) {
 }
 
-@media only screen and (max-width: 1920px) and (height: 1440px){
-
-  .buttonMovies{
+@media only screen and (max-width: 1920px) and (height: 1440px) {
+  .buttonMovies {
     width: 5vw;
     height: 2.5vh;
   }
 }
 
-@media only screen and (max-width: 1600px){
-
- 
+@media only screen and (max-width: 1600px) {
 }
 
-@media only screen and (max-width: 1450px){
-  
-  
+@media only screen and (max-width: 1450px) {
 }
 
-@media only screen and (max-width: 1379px){
-  
-  
+@media only screen and (max-width: 1379px) {
 }
 
-@media only screen and (max-width: 1200px){
-  
- 
+@media only screen and (max-width: 1200px) {
 }
 
-@media only screen and (max-width: 1024px) and (min-height: 1100px){
-  
-  .movieCoversSection{
+@media only screen and (max-width: 1024px) and (min-height: 1100px) {
+  .movieCoversSection {
     margin: 5vh 3vw;
   }
 
-  .containerMovieCovers{
+  .containerMovieCovers {
     border: 0.5vh solid white;
     box-shadow: 0.7vh 0.7vh 0.4vh white;
   }
 
-  .buttonMovies{
+  .buttonMovies {
     width: 7vw;
     height: 1.5vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 1vw;
   }
 }
 
-@media only screen and (max-width: 950px){
-  
-  
+@media only screen and (max-width: 950px) {
 }
 
-@media only screen and (max-width: 900px){
-  
-  
+@media only screen and (max-width: 900px) {
 }
 
-@media only screen and (max-width: 850px){
-  
-  .containerMovieCovers:hover{
-    transform: scale(1.10, 1.10);
+@media only screen and (max-width: 850px) {
+  .containerMovieCovers:hover {
+    transform: scale(1.1, 1.1);
   }
-  
-  .buttonMovies{
+
+  .buttonMovies {
     width: 6vw;
     height: 4vh;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 62%;
     left: 50%;
@@ -469,63 +509,79 @@
   }
 }
 
-@media only screen and (max-width: 820px) and (min-height: 1024px){
-
-  .movieCoversSection{
+@media only screen and (max-width: 820px) and (min-height: 1024px) {
+  .movieCoversSection {
     margin: 6vh 3vw;
     grid-row-gap: 4vh;
   }
-  
-  .containerMovieCovers{
+
+  .containerMovieCovers {
     border: 0.5vh solid white;
     box-shadow: 0.7vh 0.7vh 0.4vh white;
   }
-  
-  .buttonMovies{
+
+  .buttonMovies {
     width: 8vw;
     height: 2vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 1.2vw;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -65%);
-  } 
-}
-
-@media only screen and (max-width: 800px) and (max-height: 1000px){
-  
-   .containerMainMenuNavbar{
-      display: none;
-   }
-
-   .buttonMovies{
-    width: 6vw;
-    height: 3vh;
   }
 }
 
-@media only screen and (max-width: 768px) and (height: 1024px){
-  
-  .movieCoversSection{
-   margin: 6vh 3vw;
- }
-  
-  .containerMovieCovers{
+@media only screen and (max-width: 800px) and (min-height: 1000px) {
+
+  .containerMainMenuNavbar {
+    display: none;
+  }
+
+  .containerHamburgerMenu {
+    border: 2px solid red;
+    display: block;
+    width: 20%;
+  }
+
+  .buttonMovies {
+    width: 7vw;
+    height: 2vh;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .containerMainMenuNavbar {
+    display: none;
+  }
+
+  .containerHamburgerMenu {
+    border: 2px solid red;
+    display: block;
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (height: 1024px) {
+  .movieCoversSection {
+    margin: 6vh 3vw;
+  }
+
+  .containerMovieCovers {
     border: 0.5vh solid white;
   }
-  
-  .buttonMovies{
+
+  .buttonMovies {
     width: 6vw;
     height: 2vh;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 64%;
     left: 50%;
@@ -533,40 +589,40 @@
   }
 }
 
-@media only screen and (max-width: 750px){
-  
-  
+@media only screen and (max-width: 750px) {
 }
 
-@media only screen and (max-width: 720px) and (height: 1280px){
-  
-  .movieCoversSection{
+@media only screen and (max-width: 720px) and (height: 1280px) {
+  .movieCoversSection {
     margin: 6vh 3vw;
   }
-   
-   .containerMovieCovers{
-     border: 0.5vh solid white;
+
+  .containerMovieCovers {
+    border: 0.5vh solid white;
   }
-  
-  .buttonMovies{
+
+  .buttonMovies {
     width: 7vw;
     height: 1.5vh;
   }
+
+  .socialNetworksAtTheFootOfThePage {
+    margin-top: 5vh;
+  }
 }
 
-@media only screen and (max-width: 640px){
-  
-  .movieCoversSection{
+@media only screen and (max-width: 640px) {
+  .movieCoversSection {
     margin: 13vh 3vw;
     grid-row-gap: 9vh;
   }
-  
-  .buttonMovies{
+
+  .buttonMovies {
     width: 7vw;
     height: 4vh;
   }
-  
-  .buttonMoviesTrailer{
+
+  .buttonMoviesTrailer {
     position: absolute;
     top: 60%;
     left: 50%;
@@ -574,22 +630,21 @@
   }
 }
 
-@media only screen and (max-width: 640px) and (height: 960px){
-  
-  .movieCoversSection{
+@media only screen and (max-width: 640px) and (height: 960px) {
+  .movieCoversSection {
     margin: 6vh 3vw;
   }
-   
-   .containerMovieCovers{
-     border: 0.5vh solid white;
+
+  .containerMovieCovers {
+    border: 0.5vh solid white;
   }
-  
-  .buttonMovies{
+
+  .buttonMovies {
     width: 7vw;
     height: 2vh;
   }
-  
-  .buttonMoviesTrailer{
+
+  .buttonMoviesTrailer {
     position: absolute;
     top: 62%;
     left: 50%;
@@ -597,23 +652,22 @@
   }
 }
 
-@media only screen and (max-width: 600px) and (height: 1024px){
-
-  .movieCoversSection{
+@media only screen and (max-width: 600px) and (height: 1024px) {
+  .movieCoversSection {
     margin: 7vh 3vw;
     grid-row-gap: 4.5vh;
   }
-  
-  .buttonMovies{
+
+  .buttonMovies {
     width: 11vw;
     height: 2vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 1.5vw;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 64%;
     left: 50%;
@@ -621,173 +675,234 @@
   }
 }
 
-@media only screen and (max-width: 540px) and (min-height: 700px){
-  
-  .movieCoversSection{
+@media only screen and (max-width: 540px) and (min-height: 700px) {
+  .movieCoversSection {
     margin: 7vh 4vw;
     grid-row-gap: 5.5vh;
   }
-  
-  .containerMovieCovers:hover{
+
+  .containerMovieCovers:hover {
     transform: scale(1.08, 1.08);
   }
 
-  .buttonMovies{
+  .buttonMovies {
     width: 14vw;
     height: 3.5vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 2.5vw;
   }
 }
 
-@media only screen and (max-width: 537px){
-  
-  
+@media only screen and (max-width: 537px) {
 }
 
-@media only screen and (max-width: 520px){
-  
- 
+@media only screen and (max-width: 520px) {
 }
 
-@media only screen and (max-width: 500px){
-  
-  
+@media only screen and (max-width: 500px) {
 }
 
-@media only screen and (max-width: 450px){
-  
-  
+@media only screen and (max-width: 450px) {
 }
 
-@media only screen and (max-width: 430px) and (min-height: 730px){
-
-  .movieCoversSection{
+@media only screen and (max-width: 430px) and (min-height: 730px) {
+  .movieCoversSection {
     margin: 6vh 3vw;
     grid-row-gap: 4vh;
   }
 
-  .containerMovieCovers{
+  .containerMovieCovers {
     border: 0.6vh solid white;
     box-shadow: 0.7vh 0.7vh 0.4vh white;
   }
 
-  .containerMovieCovers:hover{
+  .containerMovieCovers:hover {
     transform: scale(1.06, 1.06);
   }
 
-  .buttonMovies{
+  .buttonMovies {
     width: 16vw;
     height: 2.5vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 2.5vw;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -65%);
-  } 
+  }
+
+  .containerData {
+    display: flex;
+    width: 80vw;
+    padding-left: 0px;
+  }
+
+  .containerLogos {
+    width: 13px;
+  }
+
+  .containerLogoEmail {
+    width: 13px;
+  }
+
+  .containerLogoPhone {
+    width: 15px;
+  }
+
+  .containerOfPersonalDataAndLocation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .containerTitlePersonalData h1 {
+    font-size: 10vw;
+  }
+
+  .containerPersonalData h3 {
+    font-size: 5vw;
+  }
+
+  .containerInformationInText h4 {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .socialNetworksAtTheFootOfThePage {
+    margin-top: 3vh;
+  }
+
+  .containerLogoSocialNetworks {
+    width: 8vw;
+  }
+
+  .containerLogoVercel {
+    width: 22vw;
+  }
 }
 
-@media only screen and (max-width: 400px){
-
-  .movieCoversSection{
+@media only screen and (max-width: 400px) {
+  .movieCoversSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 6vh 0vw;
   }
 
-  .containerMovieCovers:hover{
+  .containerMovieCovers:hover {
     transform: scale(1.05, 1.05);
   }
 
-  .containerMovieCovers{
+  .containerMovieCovers {
     display: flex;
     width: 85%;
   }
 
-  .buttonMovies{
+  .buttonMovies {
     width: 23vw;
     height: 4vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 4vw;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 61%;
     left: 50%;
     transform: translate(-50%, -61%);
   }
 
-  .containerTitlePersonalData{
+  .containerTitlePersonalData {
     margin: 3vh 0vw 3vh 0vw;
   }
 
-  .containerTitlePersonalData h1{
-    font-size: 8vw;
+  .containerTitlePersonalData h1 {
+    font-size: 10vw;
   }
 
-  .containerOfPersonalDataAndLocation{
+  .containerOfPersonalDataAndLocation {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .containerPersonalData h3{
-    font-size: 4.5vw;
+  .containerPersonalData h3 {
+    font-size: 6vw;
   }
 
-  .containerPersonalData{
+  .containerPersonalData {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .containerData{
+  .containerData {
     display: flex;
-    width: 50%;
+    width: 80vw;
+    padding-left: 0px;
   }
 
-  .containerInformationInText h4{
-    font-size: 3vw;
+  .containerLogos {
+    width: 13px;
   }
 
-  .iframeAzulMap{
+  .containerLogoEmail {
+    width: 13px;
+  }
+
+  .containerLogoPhone {
+    width: 15px;
+  }
+
+  .containerInformationInText h4 {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .iframeAzulMap {
     padding: 2vh 2vw 2vh 2vw;
   }
 
-  .socialNetworksAtTheFootOfThePage{
+  .socialNetworksAtTheFootOfThePage {
     margin-top: 4vh;
+  }
+
+  .containerLogoSocialNetworks {
+    width: 8vw;
+  }
+
+  .containerLogoVercel {
+    width: 22vw;
   }
 }
 
-@media only screen and (max-width: 320px) and (height: 240px){
-  .movieCoversSection{
+@media only screen and (max-width: 320px) and (height: 240px) {
+  .movieCoversSection {
     margin: 12vh 3vw;
     grid-row-gap: 8vh;
   }
-  
-  .buttonMovies{
+
+  .buttonMovies {
     width: 15vw;
     height: 8vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 3vw;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 58%;
     left: 50%;
@@ -795,17 +910,17 @@
   }
 }
 
-@media only screen and (max-width: 320px) and (height: 480px){
-  .buttonMovies{
+@media only screen and (max-width: 320px) and (height: 480px) {
+  .buttonMovies {
     width: 16vw;
     height: 4vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 3vw;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 58%;
     left: 50%;
@@ -813,34 +928,26 @@
   }
 }
 
-@media only screen and (max-width: 300px){
-  
-  
+@media only screen and (max-width: 300px) {
 }
 
-
-@media only screen and (max-width: 258px){
-  
-  
+@media only screen and (max-width: 258px) {
 }
 
-@media only screen and (max-width: 215px){
-  
-  
+@media only screen and (max-width: 215px) {
 }
 
-@media only screen and (max-width: 200px){
-  
-  .buttonMovies{
+@media only screen and (max-width: 200px) {
+  .buttonMovies {
     width: 28vw;
     height: 3.5vh;
   }
 
-  .buttonMovies a{
+  .buttonMovies a {
     font-size: 5vw;
   }
 
-  .buttonMoviesTrailer{
+  .buttonMoviesTrailer {
     position: absolute;
     top: 64%;
     left: 50%;
@@ -848,17 +955,11 @@
   }
 }
 
-@media only screen and (max-width: 150px){
-  
-  
+@media only screen and (max-width: 150px) {
 }
 
-@media only screen and (max-width: 125px){
-  
-  
+@media only screen and (max-width: 125px) {
 }
 
-@media only screen and (max-width: 110px){
-  
-  
+@media only screen and (max-width: 110px) {
 }
